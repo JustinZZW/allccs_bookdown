@@ -1,4 +1,4 @@
-# CCS Database
+# CCS Database {#ccsdb}
 
 ## Compound Browser
 ## Compound Card

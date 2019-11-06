@@ -143,29 +143,120 @@ If AllCCS is useful in your project, please cite our articles.
   annotation, In preparing
 \end{itemize}
 
-\chapter{Introduction of AllCCS}\label{intro}
+\chapter*{News}\label{news}
+\addcontentsline{toc}{chapter}{News}
 
-AllCCS is a powerful platform to support various applications in Ion
-Mobility -- Mass Spectrometry (IM-MS). It is designed to contain three
-major parts: 1) Unified CCS database, 2) Machine learning based CCS
-prediction, and 3) small molecule annotation. The unified CCS database
-is one of the most comprehensive CCS databases, covering
-\textasciitilde{}1,700,000 small molecules. It provides a universal
-platform to contain both experimental CCS values (3,539) and predicted
-CCS values (over 10,000,000). Machine learning based CCS prediction
-function supports convenient prediction from SMILES structure to CCS
-values. This function utilizes the second generation CCS prediction
-algorithm to generate CCS values and RSS score for novel structures.
-Small molecule annotation provides an easy-to-use annotation function
-for various features or compounds. It is supported to search database
-with measured m/z and CCS for annotation, or in conjunct with any other
-annotation tools, such as MetFrag, CFM-ID, MS-Finder, and SIRUS etc.
+\textbf{November 6, 2019}
+
+\begin{itemize}
+\tightlist
+\item
+  Test in web server
+\item
+  Fix bugs in admin system
+\item
+  Fix some known bugs
+\item
+  Update formal database and install AllCCS package V0.1.61
+\item
+  Correct compound name of drugbank compound 
+\end{itemize}
+
+\textbf{September 22, 2019}
+
+\begin{itemize}
+\tightlist
+\item
+  Demo webserver online
+\end{itemize}
 
 \chapter{Quick Start Guide}\label{quick-start-guide}
 
-Here is Quick Start Guide
+\section{Create a AllCCS Account}\label{create-a-allccs-account}
 
-\chapter{CCS Database}\label{ccs-database}
+Users need to register AllCCS account to use the webserver. This process
+is very sample, and \textbf{completely private}. To register an account,
+navigate to the home page. The ``Sign up'' button is in the upper right
+corner of the page. Then, you need to fill in your email and
+verification code which would be sent to your email (Figure
+\ref{fig:FigRegister}). Finally, input some basic information to
+complete the registration. You could log in and enjoy all functions in
+the web server.
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter1/register_1} 
+
+}
+
+\caption{Register AllCCS account}\label{fig:FigRegister}
+\end{figure}
+
+\section{Browser CCS database}\label{browser-ccs-database}
+
+You could search you interested compound (name, formula, smiles, inchi,
+InChIKey etc.) in the search box in navigation bar, or directly browser
+the all database records in the ``browser'' page (Figure
+\ref{fig:FigBrowser1}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter1/browser_1} 
+
+}
+
+\caption{Register AllCCS account}\label{fig:FigBrowser1}
+\end{figure}
+
+Then, you can click the link in the column of AllCCS ID to browser
+detail information of this compound (Figure \ref{fig:FigBrowser2}). It
+includes basic meta information, unified CCS values, experimental CCS
+records, predicted CCS records and other database links etc. Please see
+section \ref{ccsdb} for more details.
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter1/browser_2} 
+
+}
+
+\caption{Register AllCCS account}\label{fig:FigBrowser2}
+\end{figure}
+
+\section{Perform CCS
+prediction/Annotation}\label{perform-ccs-predictionannotation}
+
+AllCCS also provides CCS prediction function (Section
+\ref{ccsprediction}) and metabolite annotation functions (Section
+\ref{metannotation}). You could click the link or corresponding item in
+navigation bar. For CCS prediction function, please input the SMILES
+list of your compounds in the input panel. The result would be returned
+on the project panel within several seconds (Figure
+\ref{fig:FigPrediction}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter1/prediction} 
+
+}
+
+\caption{Register AllCCS account}\label{fig:FigPrediction}
+\end{figure}
+
+For annotation function, you could search experimental feature to search
+the database with your settings, or filter/rerank candidates to conjunct
+with MS/MS annotation tools (Figure \ref{fig:FigMatch}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter1/match} 
+
+}
+
+\caption{Register AllCCS account}\label{fig:FigMatch}
+\end{figure}
+
+\chapter{CCS Database}\label{ccsdb}
 
 \section{Compound Browser}\label{compound-browser}
 
@@ -173,9 +264,9 @@ Here is Quick Start Guide
 
 \section{Advanced Search}\label{advanced-search}
 
-\chapter{CCS Prediction}\label{ccs-prediction}
+\chapter{CCS Prediction}\label{ccsprediction}
 
-\chapter{Metabolite Annotation}\label{metabolite-annotation}
+\chapter{Metabolite Annotation}\label{metannotation}
 
 We have finished a nice book.
 

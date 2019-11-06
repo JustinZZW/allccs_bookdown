@@ -64,8 +64,6 @@ Zheng-Jiang Zhu ([jiangzhu@sioc.ac.cn](jiangzhu@sioc.ac.cn))<br>
 Chinese Academy of Sciences, Shanghai, China</p>
 
 
-
-
 # Citation {-}               
 If AllCCS is useful in your project, please cite our articles.
 

@@ -1,0 +1,14 @@
+# News {-}
+
+**November 6, 2019** <br>
+
+- Test in web server
+- Fix bugs in admin system
+- Fix some known bugs
+- Update formal database and install AllCCS package V0.1.61
+- Correct compound name of drugbank compound
+<br>
+
+**September 22, 2019** <br>
+
+- Demo webserver online 
