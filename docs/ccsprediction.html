@@ -76,11 +76,33 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="ccsdb.html"><a href="ccsdb.html"><i class="fa fa-check"></i><b>2</b> CCS Database</a><ul>
 <li class="chapter" data-level="2.1" data-path="ccsdb.html"><a href="ccsdb.html#compound-browser"><i class="fa fa-check"></i><b>2.1</b> Compound Browser</a></li>
-<li class="chapter" data-level="2.2" data-path="ccsdb.html"><a href="ccsdb.html#compound-card"><i class="fa fa-check"></i><b>2.2</b> Compound Card</a></li>
-<li class="chapter" data-level="2.3" data-path="ccsdb.html"><a href="ccsdb.html#advanced-search"><i class="fa fa-check"></i><b>2.3</b> Advanced Search</a></li>
+<li class="chapter" data-level="2.2" data-path="ccsdb.html"><a href="ccsdb.html#compound-card"><i class="fa fa-check"></i><b>2.2</b> Compound Card</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="ccsdb.html"><a href="ccsdb.html#compound-information"><i class="fa fa-check"></i><b>2.2.1</b> Compound information</a></li>
+<li class="chapter" data-level="2.2.2" data-path="ccsdb.html"><a href="ccsdb.html#unified-ccs"><i class="fa fa-check"></i><b>2.2.2</b> Unified CCS</a></li>
+<li class="chapter" data-level="2.2.3" data-path="ccsdb.html"><a href="ccsdb.html#experimental-ccs-records"><i class="fa fa-check"></i><b>2.2.3</b> Experimental CCS records</a></li>
+<li class="chapter" data-level="2.2.4" data-path="ccsdb.html"><a href="ccsdb.html#predicted-ccs-records"><i class="fa fa-check"></i><b>2.2.4</b> Predicted CCS records</a></li>
+<li class="chapter" data-level="2.2.5" data-path="ccsdb.html"><a href="ccsdb.html#database-link"><i class="fa fa-check"></i><b>2.2.5</b> Database link</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ccsprediction.html"><a href="ccsprediction.html"><i class="fa fa-check"></i><b>3</b> CCS Prediction</a></li>
-<li class="chapter" data-level="4" data-path="metannotation.html"><a href="metannotation.html"><i class="fa fa-check"></i><b>4</b> Metabolite Annotation</a></li>
+<li class="chapter" data-level="2.3" data-path="ccsdb.html"><a href="ccsdb.html#advanced-search"><i class="fa fa-check"></i><b>2.3</b> Advanced Search</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ccsdb.html"><a href="ccsdb.html#single-mode"><i class="fa fa-check"></i><b>2.3.1</b> Single mode</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ccsdb.html"><a href="ccsdb.html#batch-mode"><i class="fa fa-check"></i><b>2.3.2</b> Batch mode</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ccsprediction.html"><a href="ccsprediction.html"><i class="fa fa-check"></i><b>3</b> CCS Prediction</a><ul>
+<li class="chapter" data-level="3.1" data-path="ccsprediction.html"><a href="ccsprediction.html#data-preparation"><i class="fa fa-check"></i><b>3.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="ccsprediction.html"><a href="ccsprediction.html#direct-input-in-the-panel"><i class="fa fa-check"></i><b>3.1.1</b> Direct input in the panel</a></li>
+<li class="chapter" data-level="3.1.2" data-path="ccsprediction.html"><a href="ccsprediction.html#prediction-with-uploading-csv-file"><i class="fa fa-check"></i><b>3.1.2</b> Prediction with uploading CSV file</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="ccsprediction.html"><a href="ccsprediction.html#result"><i class="fa fa-check"></i><b>3.2</b> Result</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="metannotation.html"><a href="metannotation.html"><i class="fa fa-check"></i><b>4</b> Metabolite Annotation</a><ul>
+<li class="chapter" data-level="4.1" data-path="metannotation.html"><a href="metannotation.html#feature-to-candidates-feature-match"><i class="fa fa-check"></i><b>4.1</b> Feature to candidates (Feature match)</a></li>
+<li class="chapter" data-level="4.2" data-path="metannotation.html"><a href="metannotation.html#complement-to-msms-result-candidate-rank"><i class="fa fa-check"></i><b>4.2</b> Complement to MS/MS result (Candidate rank)</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="metannotation.html"><a href="metannotation.html#data-preparation-1"><i class="fa fa-check"></i><b>4.2.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="metannotation.html"><a href="metannotation.html#parameter-setting"><i class="fa fa-check"></i><b>4.2.2</b> Parameter setting</a></li>
+<li class="chapter" data-level="4.2.3" data-path="metannotation.html"><a href="metannotation.html#results"><i class="fa fa-check"></i><b>4.2.3</b> Results</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="http://www.zhulab.cn/" target="blank">Zhu Lab</a></li>
@@ -104,7 +126,46 @@
             <section class="normal" id="section-">
 <div id="ccsprediction" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> CCS Prediction</h1>
+<p>This part provides a machine-learning based CCS prediction function with the input of SMILES structures. The prediction error is estimated as low as ~2% (Median relative error), and users could predict CCS values for novel structures. Detailed information can reference (XXX).</p>
+<div id="data-preparation" class="section level2">
+<h2><span class="header-section-number">3.1</span> Data preparation</h2>
+<p>For CCS prediction, users should provide the SMILES and the unique identifier for each SMILES. And there are two approaches for users to search in the interface (Figure 3.1).</p>
+<div id="direct-input-in-the-panel" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Direct input in the panel</h3>
+<p>Users can directly search in the panel with one entry per line containing one identifier and one SMILES. When the input is complete, click submit to get the predicted results.</p>
+<p><strong>Note</strong>: - The line must be tab-separated. - The identifiers must be unique ion one submission. - Due to the limit of computational resource, the maximum item is limited as 50 for one submission.</p>
+</div>
+<div id="prediction-with-uploading-csv-file" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Prediction with uploading CSV file</h3>
+<p>It is also available for prediction by uploading a CSV file. Users can download the CSV demo file, and the data format of the CSV file is showed in the Figure 3.1. The first column contains the identifier of each SMILES and the second column is the corresponding SMILES. The format of CSV file is same as the inputting panel. Please note that the identifiers must be unique in one file, and the maximum item is limited as <strong>50</strong> for one file.</p>
+</div>
+</div>
+<div id="result" class="section level2">
+<h2><span class="header-section-number">3.2</span> Result</h2>
+<p>Results of user submissions are showed in the “My projects” panel (Figure 3.2).</p>
+<p>With preview conditions, users can get the detailed result of inputted SMILES (Figure 3.3). Compounds entries would be sorted by different adduct information. In below texts, it contains brief information for each compound.</p>
+<ul>
+<li><strong>Name</strong>: Consistent with the identifiers you input.</li>
+<li><strong>SMILES</strong>: SMILES structures.</li>
+<li><strong>Monoisotopic mass</strong>: Monoisotopic mass of structure</li>
+<li><strong>Adduct</strong>: The adduct form. AllCCS provides 7 adducts forms (Positive mode: [M+H]+, [M+Na]+, [M-H2O+H]+, [M+NH4]+; Negative mode: [M-H]-, [M+Na-2H]-, [M+HCOO]-).</li>
+<li><strong>m/z</strong>: The ratio of mass and charge</li>
+<li><strong>Predicted CCS</strong>: CCS value for the specific structure and adduct.</li>
+<li><strong>RSS</strong>: Representative structure similarity. Ref 2.2.4 for more information.</li>
+<li><strong>Status</strong>:
+<ul>
+<li><strong>Valid</strong>: Successful prediction</li>
+<li><strong>Error1</strong>: Invalid SMILES structure</li>
+<li><strong>Error2</strong>: The mass range is out of the limitation (AllCCS only supports small compound CCS prediction with mass between 60-1200).</li>
+</ul></li>
+</ul>
+<p>Users can also click download to obtain CSV table which contains the same information as preview results (Figure 3.4).</p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>Due to the computation resource limitation, it allows up to 10 projects one time in “My projects panel”. If users want to execute more projects, please delete previous projects.</li>
+</ul>
 
+</div>
 </div>
             </section>
 

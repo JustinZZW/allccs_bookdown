@@ -1,2 +1,40 @@
 # CCS Prediction {#ccsprediction}
+This part provides a machine-learning based CCS prediction function with the input of SMILES structures. The prediction error is estimated as low as ~2% (Median relative error), and users could predict CCS values for novel structures. Detailed information can reference (XXX).
+
+## Data preparation
+For CCS prediction, users should provide the SMILES and the unique identifier for each SMILES. And there are two approaches for users to search in the interface (Figure 3.1).
+
+### Direct input in the panel
+Users can directly search in the panel with one entry per line containing one identifier and one SMILES. When the input is complete, click submit to get the predicted results.
+
+**Note**:
+- The line must be tab-separated.
+- The identifiers must be unique ion one submission.
+- Due to the limit of computational resource, the maximum item is limited as 50 for one submission.
+
+### Prediction with uploading CSV file
+It is also available for prediction by uploading a CSV file. Users can download the CSV demo file, and the data format of the CSV file is showed in the Figure 3.1. The first column contains the identifier of each SMILES and the second column is the corresponding SMILES. The format of CSV file is same as the inputting panel. Please note that the identifiers must be unique in one file, and the maximum item is limited as **50** for one file.
+
+## Result
+Results of user submissions are showed in the “My projects” panel (Figure 3.2).
+
+With preview conditions, users can get the detailed result of inputted SMILES (Figure 3.3). Compounds entries would be sorted by different adduct information. In below texts, it contains brief information for each compound.
+
+- **Name**: Consistent with the identifiers you input.
+- **SMILES**: SMILES structures.
+- **Monoisotopic mass**: Monoisotopic mass of structure
+- **Adduct**: The adduct form. AllCCS provides 7 adducts forms (Positive mode: [M+H]+, [M+Na]+, [M-H2O+H]+, [M+NH4]+; Negative mode: [M-H]-, [M+Na-2H]-, [M+HCOO]-).
+- **m/z**: The ratio of mass and charge
+- **Predicted CCS**: CCS value for the specific structure and adduct.
+- **RSS**: Representative structure similarity. Ref 2.2.4 for more information.
+- **Status**: 
+    - **Valid**: Successful prediction
+    - **Error1**: Invalid SMILES structure
+    - **Error2**: The mass range is out of the limitation (AllCCS only supports small compound CCS prediction with mass between 60-1200).
+
+Users can also click download to obtain CSV table which contains the same information as preview results (Figure 3.4).
+
+**Note**:
+
+- Due to the computation resource limitation, it allows up to 10 projects one time in “My projects panel”. If users want to execute more projects, please delete previous projects.
 
