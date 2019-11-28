@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 CCS Database | AllCCS Tutorial V1.00</title>
+  <meta name="description" content="A user guide for AllCCS webserver." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 CCS Database | AllCCS Tutorial V1.00" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://allccs.zhulab.cn/" />
+  <meta property="og:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
+  <meta property="og:description" content="A user guide for AllCCS webserver." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 CCS Database | AllCCS Tutorial V1.00" />
+  
+  <meta name="twitter:description" content="A user guide for AllCCS webserver." />
+  <meta name="twitter:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
+
+<meta name="author" content="Zhiwei Zhou" />
+
+
+<meta name="date" content="2019-11-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chapter1.html"/>
+<link rel="next" href="chapter3.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">AllCCS Tutorial V1.00</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About AllCCS</a></li>
+<li class="chapter" data-level="" data-path="citation.html"><a href="citation.html"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="news.html"><a href="news.html"><i class="fa fa-check"></i>News</a></li>
+<li class="chapter" data-level="1" data-path="chapter1.html"><a href="chapter1.html"><i class="fa fa-check"></i><b>1</b> Quick Start Guide</a><ul>
+<li class="chapter" data-level="1.1" data-path="chapter1.html"><a href="chapter1.html#chaptere1d1"><i class="fa fa-check"></i><b>1.1</b> Create a AllCCS Account</a></li>
+<li class="chapter" data-level="1.2" data-path="chapter1.html"><a href="chapter1.html#chaptere1d2"><i class="fa fa-check"></i><b>1.2</b> Browser CCS database</a></li>
+<li class="chapter" data-level="1.3" data-path="chapter1.html"><a href="chapter1.html#chaptere1d3"><i class="fa fa-check"></i><b>1.3</b> Perform CCS prediction/Annotation</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> CCS Database</a><ul>
+<li class="chapter" data-level="2.1" data-path="chapter2.html"><a href="chapter2.html#chapter2d1"><i class="fa fa-check"></i><b>2.1</b> Compound Browser</a></li>
+<li class="chapter" data-level="2.2" data-path="chapter2.html"><a href="chapter2.html#chapter2d2"><i class="fa fa-check"></i><b>2.2</b> Compound Card</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d1"><i class="fa fa-check"></i><b>2.2.1</b> Compound information</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d2"><i class="fa fa-check"></i><b>2.2.2</b> Unified CCS</a></li>
+<li class="chapter" data-level="2.2.3" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d3"><i class="fa fa-check"></i><b>2.2.3</b> Experimental CCS records</a></li>
+<li class="chapter" data-level="2.2.4" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d4"><i class="fa fa-check"></i><b>2.2.4</b> Predicted CCS records</a></li>
+<li class="chapter" data-level="2.2.5" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d5"><i class="fa fa-check"></i><b>2.2.5</b> Database link</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#chapter2d3"><i class="fa fa-check"></i><b>2.3</b> Advanced Search</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#chapter2d3d1"><i class="fa fa-check"></i><b>2.3.1</b> Single mode</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chapter2.html"><a href="chapter2.html#chapter2d3d2"><i class="fa fa-check"></i><b>2.3.2</b> Batch mode</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>3</b> CCS Prediction</a><ul>
+<li class="chapter" data-level="3.1" data-path="chapter3.html"><a href="chapter3.html#chapter3d1"><i class="fa fa-check"></i><b>3.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="chapter3.html"><a href="chapter3.html#chapter3d1d1"><i class="fa fa-check"></i><b>3.1.1</b> Direct input in the panel</a></li>
+<li class="chapter" data-level="3.1.2" data-path="chapter3.html"><a href="chapter3.html#chapter3d1d2"><i class="fa fa-check"></i><b>3.1.2</b> Prediction with uploading CSV file</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="chapter3.html"><a href="chapter3.html#chapter3d2"><i class="fa fa-check"></i><b>3.2</b> Result</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> Metabolite Annotation</a><ul>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#chapter4d1"><i class="fa fa-check"></i><b>4.1</b> Feature to candidates (Feature match)</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#chapter4d2"><i class="fa fa-check"></i><b>4.2</b> Complement to MS/MS result (Candidate rank)</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="chapter4.html"><a href="chapter4.html#chapter4d2d1"><i class="fa fa-check"></i><b>4.2.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="chapter4.html"><a href="chapter4.html#chapter4d2d2"><i class="fa fa-check"></i><b>4.2.2</b> Parameter setting</a></li>
+<li class="chapter" data-level="4.2.3" data-path="chapter4.html"><a href="chapter4.html#chapter4d2d3"><i class="fa fa-check"></i><b>4.2.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="http://www.zhulab.cn/" target="blank">Zhu Lab</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">AllCCS Tutorial V1.00</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter2" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> CCS Database</h1>
+<p style="text-align:justify">
+Unified CCS database aims to be a <strong>unified platform</strong> to host both literature-reported CCS values and in-silico predicted CCS values for ion mobility - mass spectrometry (IM-MS). It is <strong>open-access</strong> and <strong>downloadable</strong>. It contains 3,539 unified CCS values which are summarized from 5,119 experimental CCS records. These experimental CCS values are acquired with variable platform including DTIMS, TWIMS and TIMS etc., and have definitive confidence level. In addition, <strong>~10,000,000 predicted CCS</strong> values are provided for <strong>~1,700,000</strong> small molecules from multiple public database to support widespread applications, including metabolomics, lipidomics, drug screening, pesticide screening etc (Table <a href="chapter2.html#tab:table2d1">2.1</a>). For each compound, its compound card contains meta information, complete records and links to other database. Finally, users can search interested compounds’ CCS values with the function of “Browser” and/or “Advance search” in this part.
+</p>
+<table>
+<caption><span id="tab:table2d1">Table 2.1: </span>Basic statistics of Unified CCS database</caption>
+<thead>
+<tr class="header">
+<th align="right">No.</th>
+<th align="left">Database</th>
+<th align="right">Compounds</th>
+<th align="left">Coverage</th>
+<th align="left">Mirror date</th>
+<th align="left">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left"><a href="https://www.genome.jp/kegg/">KEGG</a></td>
+<td align="right">16085</td>
+<td align="left">Metabolites &amp; lipids</td>
+<td align="left">2018-08-02</td>
+<td align="left">Kanehisa et al.1</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left"><a href="http://www.hmdb.ca/">HMDB</a></td>
+<td align="right">113989</td>
+<td align="left">Metabolites &amp; lipids</td>
+<td align="left">2018-06-09</td>
+<td align="left">Wishart et al.2</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left"><a href="https://www.lipidmaps.org/">LMSD</a></td>
+<td align="right">40532</td>
+<td align="left">Metabolites &amp; lipids</td>
+<td align="left">2019-07-11</td>
+<td align="left">Fahy et al.3</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left"><a href="https://minedatabase.mcs.anl.gov/">MINE</a></td>
+<td align="right">592175</td>
+<td align="left">Metabolites &amp; lipids</td>
+<td align="left">2018-02-07</td>
+<td align="left">Jeffryes et al.4</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left"><a href="https://www.drugbank.ca/">DrugBank</a></td>
+<td align="right">9546</td>
+<td align="left">Drugs &amp; xenobiolics</td>
+<td align="left">2019-04-12</td>
+<td align="left">Wishart et al.5</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left"><a href="https://comptox.epa.gov/dashboard">DSSTox</a></td>
+<td align="right">856919</td>
+<td align="left">Drugs &amp; xenobiolics</td>
+<td align="left">2019-05-06</td>
+<td align="left">Grulke et al.6</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left"><a href="NA">UNPD</a></td>
+<td align="right">213188</td>
+<td align="left">Natural products</td>
+<td align="left">2019-06-13</td>
+<td align="left">Gu et al.7</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left"><a href="NA">ZhuLab</a></td>
+<td align="right">1417</td>
+<td align="left">Metabolites &amp; lipids</td>
+<td align="left">2018-09-02</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+<div id="chapter2d1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Compound Browser</h2>
+<p style="text-align:justify">
+Compound Browser Function provides a simple and straightforward way to browser the database. There are several browser conditions set in “Browser” part (Figure <a href="chapter2.html#fig:figure2d1">2.1</a>).
+</p>
+<ul>
+<li><strong>Type</strong>: It provides the choice of CCS values generated from experiments or prediction.</li>
+<li><strong>Database</strong>: this option includes variable databases that cover all compounds in our unified database (Table <a href="chapter2.html#tab:table2d1">2.1</a>). And users can choose specific database(s) for further execution.</li>
+<li><strong>Level</strong>: it includes confidence level (See Section <a href="chapter2.html#chapter2d2">2.2</a>) of compounds in the unified database. It helps to choose compounds in the clearly defined level.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:figure2d1"></span>
+<img src="images/chapter2/figure2.1browser_condition.png" alt="Browser conditions"  />
+<p class="caption">
+Figure 2.1: Browser conditions
+</p>
+</div>
+<p style="text-align:justify">
+With browser conditions, users can screen out a series of interested compounds. Compounds entries would be displayed according to defined condition. In below text, it contains brief information for each compound.
+</p>
+<ul>
+<li><strong>AllCCS ID</strong>: As described in the section <a href="chapter1.html#chaptere1d2">1.2</a>, users can click the link in the column of AllCCS ID to browse the corresponding compound card (Figure <a href="chapter1.html#fig:FigBrowser1">1.2</a>).</li>
+<li><strong>Name</strong>: compound name</li>
+<li><strong>Structure</strong>: the image of compound structure</li>
+<li><strong>Formula</strong>: chemical formula</li>
+<li><strong>Experimental CCS</strong>: The unified CCS value reported in literature (See Section <a href="chapter2.html#chapter2d2d3">2.2.3</a>)</li>
+<li><strong>Predicted CCS</strong>: The predicted CCS values using machine-learning algorithm. (See Section <a href="chapter2.html#chapter2d2d4">2.2.4</a>)</li>
+<li><strong>Highest level</strong>: The highest confidence level of CCS values (See Section <a href="chapter2.html#chapter2d2d2">2.2.2</a>)</li>
+</ul>
+<p style="text-align:justify">
+Users can check the interested compounds in the last column. Click the download option, you could download a CSV table containing the information of you checked compounds (Figure <a href="chapter2.html#fig:figure2d2">2.2</a>).
+</p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>Download function supports up to <strong>100</strong> items for one time.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:figure2d2"></span>
+<img src="images/chapter2/figure2.2browser_download_new.png" alt="Download interested compounds"  />
+<p class="caption">
+Figure 2.2: Download interested compounds
+</p>
+</div>
+</div>
+<div id="chapter2d2" class="section level2">
+<h2><span class="header-section-number">2.2</span> Compound Card</h2>
+<p style="text-align:justify">
+In the compound card, it contains detail information of the compound. Next, we would like to explain each parts in the compound card.
+</p>
+<div id="chapter2d2d1" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Compound information</h3>
+<p style="text-align:justify">
+It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure <a href="chapter2.html#fig:figure2d3">2.3</a>). Here, <a href="http://classyfire.wishartlab.com">ClassyFire</a> is used for compounds’ classification <strong>【ref8】</strong>.
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure2d3"></span>
+<img src="images/chapter2/figure2.3compound_card_information.png" alt="Download interested compounds"  />
+<p class="caption">
+Figure 2.3: Download interested compounds
+</p>
+</div>
+</div>
+<div id="chapter2d2d2" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Unified CCS</h3>
+<p style="text-align:justify">
+This part contains the CCS information of different adduct forms with experimental CCS (if exists) and predicted CCS (Figure <a href="chapter2.html#fig:figure2d4">2.4</a>). The CCS reported here is the unified CCS values. We defined unified CCS as the average CCS value with definitive confidence level. The definition of confidence level can find in Table <a href="chapter2.html#tab:table2d2">2.2</a>. CCS values of confidence 1, 2, 3 are all experimental values. The definition of confidence level:
+</p>
+<table>
+<caption><span id="tab:table2d2">Table 2.2: </span>Definition of confidence level</caption>
+<thead>
+<tr class="header">
+<th align="left">Confidence level</th>
+<th align="left">Platform</th>
+<th align="left">Reported labs (N)</th>
+<th align="left">Maximum relative error (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Level 1</td>
+<td align="left">DTIMS</td>
+<td align="left">N≥2</td>
+<td align="left">≤1%</td>
+</tr>
+<tr class="even">
+<td align="left">Level 2</td>
+<td align="left">DTIMS/TWIMS/TIMS</td>
+<td align="left">N≥2</td>
+<td align="left">≤3%</td>
+</tr>
+<tr class="odd">
+<td align="left">Level 3</td>
+<td align="left">DTIMS/TWIMS/TIMS</td>
+<td align="left">N=1</td>
+<td align="left">—</td>
+</tr>
+<tr class="even">
+<td align="left">Level 4</td>
+<td align="left">Predicted CCS</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr class="odd">
+<td align="left">Conflict</td>
+<td align="left">DTIMS/TWIMS/TIMS</td>
+<td align="left">N≥2</td>
+<td align="left">&gt;3%</td>
+</tr>
+<tr class="even">
+<td align="left"><br></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Confidence level 1</strong> represents the CCS value of the specie which is acquired with DTIMS and has been reported at least twice in different labs with the maximum relative error less than 1%.</li>
+<li><strong>Confidence level 2</strong> represents the CCS value of specie which is acquired with DTIMS, TWIMS or TIMS and has been reported at least twice in different labs with the maximum relative error less than 3%.</li>
+<li><strong>Confidence level 3</strong> represents the CCS value of specie is acquired with DTIMS, TWIMS or TIMS and only reported by one lab.</li>
+<li><strong>Confidence level 4</strong> represents the predicted CCS value.</li>
+<li><strong>Conflict</strong> means the CCS value of specie which is acquired with DTIMS, TWIMS or TIMS and has been reported at least twice in different labs, but the maximum relative error is more than 3%.</li>
+</ul>
+<br>
+<div class="figure" style="text-align: center"><span id="fig:figure2d4"></span>
+<img src="images/chapter2/figure2.4unified_ccs.png" alt="Unified CCS"  />
+<p class="caption">
+Figure 2.4: Unified CCS
+</p>
+</div>
+</div>
+<div id="chapter2d2d3" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Experimental CCS records</h3>
+<p style="text-align:justify">
+This part records the detailed information of experimental CCS values (Figure <a href="chapter2.html#fig:figure2d5">2.5</a>). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in Table 2.3. The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure2d5"></span>
+<img src="images/chapter2/figure2.5compound_card_exp_ccs.png" alt="Experimental CCS records"  />
+<p class="caption">
+Figure 2.5: Experimental CCS records
+</p>
+</div>
+</div>
+<div id="chapter2d2d4" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Predicted CCS records</h3>
+<p style="text-align:justify">
+This part records the detailed information of predicted CCS values (Figure <a href="chapter2.html#fig:figure2d6">2.6</a>). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference our in pressing paper <strong>(XXXX)</strong> for detailed information. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure2d6"></span>
+<img src="images/chapter2/figure2.6predicted_ccs.png" alt="Predicted CCS records"  />
+<p class="caption">
+Figure 2.6: Predicted CCS records
+</p>
+</div>
+</div>
+<div id="chapter2d2d5" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Database link</h3>
+<p style="text-align:justify">
+This part provides the link to databases that contain the compound (Figure <a href="chapter2.html#fig:figure2d7">2.7</a>).
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure2d7"></span>
+<img src="images/chapter2/figure2.7database_link.png" alt="Database link"  />
+<p class="caption">
+Figure 2.7: Database link
+</p>
+</div>
+</div>
+</div>
+<div id="chapter2d3" class="section level2">
+<h2><span class="header-section-number">2.3</span> Advanced Search</h2>
+<p style="text-align:justify">
+For advanced search, there are two modes for users to search the compounds in our unified CCS database, including <strong>“single mode”</strong> and <strong>“batch mode”</strong>.
+</p>
+<div id="chapter2d3d1" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Single mode</h3>
+<p style="text-align:justify">
+As named, users can search for one compounds at one time in single mode. Here, we provide several optional identifiers for users to choose (Figure <a href="chapter2.html#fig:figure2d8">2.8</a>), including compound’s name, database ID, formula, SMILES, InChI, InChIKey.
+</p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>If you don’t have confirmed identifier, keep it as null.</li>
+<li>If there are contradictory identifier, it will return no available data.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:figure2d8"></span>
+<img src="images/chapter2/figure2.8advance_search_single.png" alt="Advanced search – single mode"  />
+<p class="caption">
+Figure 2.8: Advanced search – single mode
+</p>
+</div>
+</div>
+<div id="chapter2d3d2" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Batch mode</h3>
+<p style="text-align:justify">
+If there are multiple compounds, users can use batch mode to search (Figure <a href="chapter2.html#fig:figure2d9">2.9</a>). Currently, this function supports identifiers including “Database ID”, SMILES, InChIKey. While choosing database ID as identifier, there are several choice of databases in the right panel close to identifier option.
+</p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>In searching panel, you can enter one item per line.</li>
+<li>It should not contain extra space.</li>
+<li>It supports up to 100 query items per request.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:figure2d9"></span>
+<img src="images/chapter2/figure2.9advance_search_batch.png" alt="Advanced search – batch mode"  />
+<p class="caption">
+Figure 2.9: Advanced search – batch mode
+</p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["allccs_bookdown.pdf", "allccs_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -21,7 +21,6 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
@@ -73,7 +72,7 @@
 \usepackage{titling}
 
 % Create subtitle command for use in maketitle
-\newcommand{\subtitle}[1]{
+\providecommand{\subtitle}[1]{
   \posttitle{
     \begin{center}\large#1\end{center}
     }
@@ -93,20 +92,6 @@
 
 \usepackage{booktabs}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -194,9 +179,9 @@ If AllCCS is useful in your project, please cite our articles.
   Demo webserver online
 \end{itemize}
 
-\chapter{Quick Start Guide}\label{quick-start-guide}
+\chapter{Quick Start Guide}\label{chapter1}
 
-\section{Create a AllCCS Account}\label{create-a-allccs-account}
+\section{Create a AllCCS Account}\label{chaptere1d1}
 
 Users need to register AllCCS account to use the webserver. This process
 is very sample, and \textbf{completely private}. To register an account,
@@ -216,7 +201,7 @@ the web server.
 \caption{Register AllCCS account}\label{fig:FigRegister}
 \end{figure}
 
-\section{Browser CCS database}\label{browser-ccs-database}
+\section{Browser CCS database}\label{chaptere1d2}
 
 You could search you interested compound (name, formula, smiles, inchi,
 InChIKey etc.) in the search box in navigation bar, or directly browser
@@ -229,14 +214,14 @@ the all database records in the ``browser'' page (Figure
 
 }
 
-\caption{Register AllCCS account}\label{fig:FigBrowser1}
+\caption{Browser CCS database}\label{fig:FigBrowser1}
 \end{figure}
 
 Then, you can click the link in the column of AllCCS ID to browser
 detail information of this compound (Figure \ref{fig:FigBrowser2}). It
 includes basic meta information, unified CCS values, experimental CCS
 records, predicted CCS records and other database links etc. Please see
-section \ref{ccsdb} for more details.
+section \ref{chapter2} for more details.
 
 \begin{figure}
 
@@ -244,11 +229,10 @@ section \ref{ccsdb} for more details.
 
 }
 
-\caption{Register AllCCS account}\label{fig:FigBrowser2}
+\caption{Details of compounds}\label{fig:FigBrowser2}
 \end{figure}
 
-\section{Perform CCS
-prediction/Annotation}\label{perform-ccs-predictionannotation}
+\section{Perform CCS prediction/Annotation}\label{chaptere1d3}
 
 AllCCS also provides CCS prediction function (Section
 \ref{ccsprediction}) and metabolite annotation functions (Section
@@ -264,7 +248,7 @@ on the project panel within several seconds (Figure
 
 }
 
-\caption{Register AllCCS account}\label{fig:FigPrediction}
+\caption{CCS prediction function}\label{fig:FigPrediction}
 \end{figure}
 
 For annotation function, you could search experimental feature to search
@@ -277,30 +261,30 @@ with MS/MS annotation tools (Figure \ref{fig:FigMatch}).
 
 }
 
-\caption{Register AllCCS account}\label{fig:FigMatch}
+\caption{Metabolite match and candidate rank}\label{fig:FigMatch}
 \end{figure}
 
-\chapter{CCS Database}\label{ccsdb}
+\chapter{CCS Database}\label{chapter2}
 
 Unified CCS database aims to be a \textbf{unified platform} to host both
 literature-reported CCS values and in-silico predicted CCS values for
 ion mobility - mass spectrometry (IM-MS). It is \textbf{open-access} and
-\textbf{downloadable}. It contains \textbf{3,539 unified CCS values}
-which are summarized from \textbf{5,119 experimental CCS records}. These
-experimental CCS values are acquired with variable platform including
-DTIMS, TWIMS and TIMS etc., and have definitive confidence level. In
-addition, \textbf{\textasciitilde{}10,000,000 predicted CCS} values are
-provided for \textbf{\textasciitilde{}1,700,000} small molecules from
-multiple public database to support widespread applications, including
+\textbf{downloadable}. It contains 3,539 unified CCS values which are
+summarized from 5,119 experimental CCS records. These experimental CCS
+values are acquired with variable platform including DTIMS, TWIMS and
+TIMS etc., and have definitive confidence level. In addition,
+\textbf{\textasciitilde{}10,000,000 predicted CCS} values are provided
+for \textbf{\textasciitilde{}1,700,000} small molecules from multiple
+public database to support widespread applications, including
 metabolomics, lipidomics, drug screening, pesticide screening etc (Table
-\ref{tab:dbinfo}). For each compound, its compound card contains meta
+\ref{tab:table2d1}). For each compound, its compound card contains meta
 information, complete records and links to other database. Finally,
 users can search interested compounds' CCS values with the function of
 ``Browser'' and/or ``Advance search'' in this part.
 
 \begin{table}
 
-\caption{\label{tab:dbinfo}A table of the first 10 rows of the mtcars data.}
+\caption{\label{tab:table2d1}Basic statistics of Unified CCS database}
 \centering
 \begin{tabular}[t]{rlrlll}
 \toprule
@@ -319,11 +303,11 @@ No. & Database & Compounds & Coverage & Mirror date & Reference\\
 \end{tabular}
 \end{table}
 
-\section{Compound Browser}\label{compound-browser}
+\section{Compound Browser}\label{chapter2d1}
 
 Compound Browser Function provides a simple and straightforward way to
 browser the database. There are several browser conditions set in
-``Browser'' part (Figure 2.1).
+``Browser'' part (Figure \ref{fig:figure2d1}).
 
 \begin{itemize}
 \tightlist
@@ -332,13 +316,22 @@ browser the database. There are several browser conditions set in
   experiments or prediction.
 \item
   \textbf{Database}: this option includes variable databases that cover
-  all compounds in our unified database (Table \ref{tab:dbinfo}). And
+  all compounds in our unified database (Table \ref{tab:table2d1}). And
   users can choose specific database(s) for further execution.
 \item
-  \textbf{Level}: it includes confidence level (ref section 2.2) of
-  compounds in the unified database. It helps to choose compounds in the
-  clearly defined level.
+  \textbf{Level}: it includes confidence level (See Section
+  \ref{chapter2d2}) of compounds in the unified database. It helps to
+  choose compounds in the clearly defined level.
 \end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.1browser_condition} 
+
+}
+
+\caption{Browser conditions}\label{fig:figure2d1}
+\end{figure}
 
 With browser conditions, users can screen out a series of interested
 compounds. Compounds entries would be displayed according to defined
@@ -348,9 +341,9 @@ compound.
 \begin{itemize}
 \tightlist
 \item
-  \textbf{AllCCS ID}: As described in the section 1.2, users can click
-  the link in the column of AllCCS ID to browse the corresponding
-  compound card (Figure 1.2).
+  \textbf{AllCCS ID}: As described in the section \ref{chaptere1d2},
+  users can click the link in the column of AllCCS ID to browse the
+  corresponding compound card (Figure \ref{fig:FigBrowser1}).
 \item
   \textbf{Name}: compound name
 \item
@@ -359,18 +352,18 @@ compound.
   \textbf{Formula}: chemical formula
 \item
   \textbf{Experimental CCS}: The unified CCS value reported in
-  literature (See Ref 2.2.3)
+  literature (See Section \ref{chapter2d2d3})
 \item
   \textbf{Predicted CCS}: The predicted CCS values using
-  machine-learning algorithm. (See Ref 2.2.4)
+  machine-learning algorithm. (See Section \ref{chapter2d2d4})
 \item
   \textbf{Highest level}: The highest confidence level of CCS values
-  (See Ref 2.2.2)
+  (See Section \ref{chapter2d2d2})
 \end{itemize}
 
 Users can check the interested compounds in the last column. Click the
 download option, you could download a CSV table containing the
-information of you checked compounds (Figure 2.2).
+information of you checked compounds (Figure \ref{fig:figure2d2}).
 
 \textbf{Note}:
 
@@ -380,27 +373,63 @@ information of you checked compounds (Figure 2.2).
   Download function supports up to \textbf{100} items for one time.
 \end{itemize}
 
-\section{Compound Card}\label{compound-card}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.2browser_download_new} 
+
+}
+
+\caption{Download interested compounds}\label{fig:figure2d2}
+\end{figure}
+
+\section{Compound Card}\label{chapter2d2}
 
 In the compound card, it contains detail information of the compound.
 Next, we would like to explain each parts in the compound card.
 
-\subsection{Compound information}\label{compound-information}
+\subsection{Compound information}\label{chapter2d2d1}
 
 It contains the basic information of the compound, including ALLCCS ID,
 name, formula, exact mass, SMILES, InChI, InChIKey, classification and
-structure in the right panel (Figure 2.3). Here, ClassyFire
-(\url{http://classyfire.wishartlab.com}) is used for compounds'
-classification 【ref】.
+structure in the right panel (Figure \ref{fig:figure2d3}). Here,
+\href{http://classyfire.wishartlab.com}{ClassyFire} is used for
+compounds' classification \textbf{【ref8】}.
 
-\subsection{Unified CCS}\label{unified-ccs}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.3compound_card_information} 
+
+}
+
+\caption{Download interested compounds}\label{fig:figure2d3}
+\end{figure}
+
+\subsection{Unified CCS}\label{chapter2d2d2}
 
 This part contains the CCS information of different adduct forms with
-experimental CCS (if exists) and predicted CCS (Figure 2.4). The CCS
-reported here is the unified CCS values. We defined unified CCS as the
-average CCS value with definitive confidence level. The definition of
-confidence level can find in Table 2.2. CCS values of confidence 1, 2, 3
-are all experimental values. The definition of confidence level:
+experimental CCS (if exists) and predicted CCS (Figure
+\ref{fig:figure2d4}). The CCS reported here is the unified CCS values.
+We defined unified CCS as the average CCS value with definitive
+confidence level. The definition of confidence level can find in Table
+\ref{tab:table2d2}. CCS values of confidence 1, 2, 3 are all
+experimental values. The definition of confidence level:
+
+\begin{table}
+
+\caption{\label{tab:table2d2}Definition of confidence level}
+\centering
+\begin{tabular}[t]{llll}
+\toprule
+Confidence level & Platform & Reported labs (N) & Maximum relative error (\%)\\
+\midrule
+Level 1 & DTIMS & N≥2 & ≤1\%\\
+Level 2 & DTIMS/TWIMS/TIMS & N≥2 & ≤3\%\\
+Level 3 & DTIMS/TWIMS/TIMS & N=1 & ---\\
+Level 4 & Predicted CCS & --- & ---\\
+Conflict & DTIMS/TWIMS/TIMS & N≥2 & >3\%\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{itemize}
 \tightlist
@@ -423,44 +452,82 @@ are all experimental values. The definition of confidence level:
   labs, but the maximum relative error is more than 3\%.
 \end{itemize}
 
-\subsection{Experimental CCS records}\label{experimental-ccs-records}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.4unified_ccs} 
+
+}
+
+\caption{Unified CCS}\label{fig:figure2d4}
+\end{figure}
+
+\subsection{Experimental CCS records}\label{chapter2d2d3}
 
 This part records the detailed information of experimental CCS values
-(Figure 2.5). Compounds that have experimental CCS records contains the
-basic information of adduct form, m/z, experimental CCS values and
-charge. Besides, we also provide the information of used instrument
-platform and the type of ion mobility mass spectrometry. Detail
-information can be found in table 2.3. The measured approach is also
-provided, including single-field, multiple-fields, and empirical method.
-Corresponding reference literature is listed in the DOI column. If
-compounds don't have experimental CCS record, it would have no
+(Figure \ref{fig:figure2d5}). Compounds that have experimental CCS
+records contains the basic information of adduct form, m/z, experimental
+CCS values and charge. Besides, we also provide the information of used
+instrument platform and the type of ion mobility mass spectrometry.
+Detail information can be found in Table 2.3. The measured approach is
+also provided, including single-field, multiple-fields, and empirical
+method. Corresponding reference literature is listed in the DOI column.
+If compounds don't have experimental CCS record, it would have no
 information in this part.
 
-\subsection{Predicted CCS records}\label{predicted-ccs-records}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.5compound_card_exp_ccs} 
+
+}
+
+\caption{Experimental CCS records}\label{fig:figure2d5}
+\end{figure}
+
+\subsection{Predicted CCS records}\label{chapter2d2d4}
 
 This part records the detailed information of predicted CCS values
-(Figure 2.6). It provides the basic information of adduct forms, m/z,
-charge, corresponding predicted CCS values using AllCCS\_V1 tool, users
-can reference our paper (XXXX) for details. Here we define
-representative structure similarity (RSS) to represent the similarity
-between this compound and the training set.
+(Figure \ref{fig:figure2d6}). It provides the basic information of
+adduct forms, m/z, charge, corresponding predicted CCS values using
+AllCCS\_V1 tool, users can reference our in pressing paper
+\textbf{(XXXX)} for detailed information. Here we define representative
+structure similarity (RSS) to represent the similarity between this
+compound and the training set.
 
-\subsection{Database link}\label{database-link}
+\begin{figure}
 
-This part provides the link to databases that contain the compound.
+{\centering \includegraphics{images/chapter2/figure2.6predicted_ccs} 
 
-\section{Advanced Search}\label{advanced-search}
+}
+
+\caption{Predicted CCS records}\label{fig:figure2d6}
+\end{figure}
+
+\subsection{Database link}\label{chapter2d2d5}
+
+This part provides the link to databases that contain the compound
+(Figure \ref{fig:figure2d7}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.7database_link} 
+
+}
+
+\caption{Database link}\label{fig:figure2d7}
+\end{figure}
+
+\section{Advanced Search}\label{chapter2d3}
 
 For advanced search, there are two modes for users to search the
 compounds in our unified CCS database, including \textbf{``single
 mode''} and \textbf{``batch mode''}.
 
-\subsection{Single mode}\label{single-mode}
+\subsection{Single mode}\label{chapter2d3d1}
 
 As named, users can search for one compounds at one time in single mode.
 Here, we provide several optional identifiers for users to choose
-(Figure 2.8), including compound's name, database ID, formula, SMILES,
-InChI, InChIKey.
+(Figure \ref{fig:figure2d8}), including compound's name, database ID,
+formula, SMILES, InChI, InChIKey.
 
 \textbf{Note}:
 
@@ -473,13 +540,22 @@ InChI, InChIKey.
   data.
 \end{itemize}
 
-\subsection{Batch mode}\label{batch-mode}
+\begin{figure}
 
-If there are multiple compounds, users can use batch mode to search.
-Currently, this function supports identifiers including ``Database ID'',
-SMILES, InChIKey. While choosing database ID as identifier, there are
-several choice of databases in the right panel close to identifier
-option.
+{\centering \includegraphics{images/chapter2/figure2.8advance_search_single} 
+
+}
+
+\caption{Advanced search – single mode}\label{fig:figure2d8}
+\end{figure}
+
+\subsection{Batch mode}\label{chapter2d3d2}
+
+If there are multiple compounds, users can use batch mode to search
+(Figure \ref{fig:figure2d9}). Currently, this function supports
+identifiers including ``Database ID'', SMILES, InChIKey. While choosing
+database ID as identifier, there are several choice of databases in the
+right panel close to identifier option.
 
 \textbf{Note}:
 
@@ -493,50 +569,85 @@ option.
   It supports up to 100 query items per request.
 \end{itemize}
 
-\chapter{CCS Prediction}\label{ccsprediction}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter2/figure2.9advance_search_batch} 
+
+}
+
+\caption{Advanced search – batch mode}\label{fig:figure2d9}
+\end{figure}
+
+\chapter{CCS Prediction}\label{chapter3}
 
 This part provides a machine-learning based CCS prediction function with
 the input of SMILES structures. The prediction error is estimated as low
 as \textasciitilde{}2\% (Median relative error), and users could predict
-CCS values for novel structures. Detailed information can reference
-(XXX).
+CCS values for novel structures. Detail of prediction is provided in our
+AllCCS article \textbf{【ref10】}.
 
-\section{Data preparation}\label{data-preparation}
+\section{Data preparation}\label{chapter3d1}
 
 For CCS prediction, users should provide the SMILES and the unique
 identifier for each SMILES. And there are two approaches for users to
-search in the interface (Figure 3.1).
+search in the interface (Figure \ref{fig:figure3d1}).
 
-\subsection{Direct input in the panel}\label{direct-input-in-the-panel}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter3/figure3.1prediction} 
+
+}
+
+\caption{CCS prediction}\label{fig:figure3d1}
+\end{figure}
+
+\subsection{Direct input in the panel}\label{chapter3d1d1}
 
 Users can directly search in the panel with one entry per line
 containing one identifier and one SMILES. When the input is complete,
 click submit to get the predicted results.
 
-\textbf{Note}: - The line must be tab-separated. - The identifiers must
-be unique ion one submission. - Due to the limit of computational
-resource, the maximum item is limited as 50 for one submission.
+\textbf{Note}:
 
-\subsection{Prediction with uploading CSV
-file}\label{prediction-with-uploading-csv-file}
+\begin{itemize}
+\tightlist
+\item
+  The line must be tab-separated.
+\item
+  The identifiers must be unique in one submission.
+\item
+  Due to the limit of computational resource, the maximum item is
+  limited as 50 for one submission.
+\end{itemize}
+
+\subsection{Prediction with uploading CSV file}\label{chapter3d1d2}
 
 It is also available for prediction by uploading a CSV file. Users can
 download the CSV demo file, and the data format of the CSV file is
-showed in the Figure 3.1. The first column contains the identifier of
-each SMILES and the second column is the corresponding SMILES. The
-format of CSV file is same as the inputting panel. Please note that the
-identifiers must be unique in one file, and the maximum item is limited
-as \textbf{50} for one file.
+showed in the Figure \ref{fig:figure3d1}. The first column contains the
+identifier of each SMILES and the second column is the corresponding
+SMILES. The format of CSV file is same as the inputting panel. Please
+note that the identifiers must be unique in one file, and the maximum
+item is limited as \textbf{50} for one file.
 
-\section{Result}\label{result}
+\section{Result}\label{chapter3d2}
 
 Results of user submissions are showed in the ``My projects'' panel
-(Figure 3.2).
+(Figure \ref{fig:figure3d2}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter3/figure3.2prediction_result} 
+
+}
+
+\caption{CCS prediction results}\label{fig:figure3d2}
+\end{figure}
 
 With preview conditions, users can get the detailed result of inputted
-SMILES (Figure 3.3). Compounds entries would be sorted by different
-adduct information. In below texts, it contains brief information for
-each compound.
+SMILES (Figure \ref{fig:figure3d3}). Compounds entries would be sorted
+by different adduct information. In below texts, it contains brief
+information for each compound.
 
 \begin{itemize}
 \tightlist
@@ -556,8 +667,8 @@ each compound.
   \textbf{Predicted CCS}: CCS value for the specific structure and
   adduct.
 \item
-  \textbf{RSS}: Representative structure similarity. Ref 2.2.4 for more
-  information.
+  \textbf{RSS}: Representative structure similarity. See Section
+  \ref{chapter2d2d4} for more information.
 \item
   \textbf{Status}:
 
@@ -574,8 +685,26 @@ each compound.
   \end{itemize}
 \end{itemize}
 
+\begin{figure}
+
+{\centering \includegraphics{images/chapter3/figure3.3preview_result} 
+
+}
+
+\caption{Preview results}\label{fig:figure3d3}
+\end{figure}
+
 Users can also click download to obtain CSV table which contains the
-same information as preview results (Figure 3.4).
+same information as preview results (Figure \ref{fig:figure3d4}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter3/figure3.4download_result} 
+
+}
+
+\caption{Download results}\label{fig:figure3d4}
+\end{figure}
 
 \textbf{Note}:
 
@@ -583,11 +712,11 @@ same information as preview results (Figure 3.4).
 \tightlist
 \item
   Due to the computation resource limitation, it allows up to 10
-  projects one time in ``My projects panel''. If users want to execute
-  more projects, please delete previous projects.
+  projects one time in ``\emph{My projects panel}''. If users want to
+  execute more projects, please delete previous projects.
 \end{itemize}
 
-\chapter{Metabolite Annotation}\label{metannotation}
+\chapter{Metabolite Annotation}\label{chapter4}
 
 The part provides an easy-to-use annotation function for unknown
 features or compounds. It consists of two functions in this part. One is
@@ -598,12 +727,21 @@ MS-Finder, and SIRIUS etc. With the results from previously mentioned
 tools, and inputting experimental m/z and experimental CCS, users can
 filter/re-rank candidates for more accurate annotation.
 
-\section{Feature to candidates (Feature
-match)}\label{feature-to-candidates-feature-match}
+\section{Feature to candidates (Feature match)}\label{chapter4d1}
 
 Feature match function provides a simple and straightforward way to
 annotate features with experimental m/z and CCS in the AllCCS database.
-There are several annotation conditions set in this part (Figure 4.1).
+There are several annotation conditions set in this part (Figure
+\ref{fig:figure4d1}).
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter4/figure4.1} 
+
+}
+
+\caption{Feature annotation}\label{fig:figure4d1}
+\end{figure}
 
 \begin{itemize}
 \tightlist
@@ -623,18 +761,20 @@ There are several annotation conditions set in this part (Figure 4.1).
   database.
 \item
   \textbf{Type}: Match with the checked CCS type in the database,
-  including Experimental CCS, Predicted CCS (See Ref 2.1).
+  including Experimental CCS, Predicted CCS (See Section
+  \ref{chapter2d1}).
 \item
   \textbf{Database}: Match with the checked database. It includes 8
-  compound structure sources (See Ref 2.1).
+  compound structure sources (See Section \ref{chapter2d1}).
 \end{itemize}
 
-The match results are as follows (Figure 4.2). The results contain brief
-information for each compound as section 2.1 Compound Browser mentioned.
+The match results are as follows (Figure \ref{fig:figure4d2}). The
+results contain brief information for each compound as section 2.1
+Compound Browser mentioned.
 
 Users can check the interested compounds in the last column. Click the
 download option, you could download a CSV table containing the
-information of you checked compounds (Figure 4.2).
+information of you checked compounds (Figure \ref{fig:figure4d2}).
 
 \textbf{Note}:
 
@@ -644,8 +784,16 @@ information of you checked compounds (Figure 4.2).
   Download function supports up to 100 items for one time.
 \end{itemize}
 
-\section{Complement to MS/MS result (Candidate
-rank)}\label{complement-to-msms-result-candidate-rank}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter4/figure4.2feature_match} 
+
+}
+
+\caption{Feature match results}\label{fig:figure4d2}
+\end{figure}
+
+\section{Complement to MS/MS result (Candidate rank)}\label{chapter4d2}
 
 The candidate rank function supports filtering/re-rank candidates with
 inputted candidate list. This function could be in conjunct with any
@@ -655,16 +803,25 @@ etc. Specifically, it has two rank types: \textbf{CCS filtering} and
 (comparing with predicted CCS values) beyond the pre-defined cutoff
 value. CCS scoring generates an integrated score for each candidate with
 custom weights of CCS score (The detail is some with our previous
-publication - LipidIMMS Analyzer) and MS/MS score. With CCS filtering or
-scoring, it can provide more credible results.
+publication - LipidIMMS Analyzer9) and MS/MS score. With CCS filtering
+or scoring, it can provide more credible results.
 
-\subsection{Data preparation}\label{data-preparation-1}
+\subsection{Data preparation}\label{chapter4d2d1}
 
 The MS/MS results (CSV file) generated from other tools should be
-modified as specific format. A demo data is showed in Figure 4.3. It
-should include 7 columns with specific names (``rank'', ``name'',
-``smiles'', ``inchikey'', ``adduct'', ``score''). The definitions of
-each column are given as follows:
+modified as specific format. A demo data is showed in Figure
+\ref{fig:figure4d3}. It should include 7 columns with specific names
+(``rank'', ``name'', ``smiles'', ``inchikey'', ``adduct'', ``score'').
+The definitions of each column are given as follows:
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter4/figure4.3candidate_rank} 
+
+}
+
+\caption{Candidate rank function}\label{fig:figure4d3}
+\end{figure}
 
 \begin{itemize}
 \tightlist
@@ -690,10 +847,17 @@ each column are given as follows:
   score generated in in-silico MS/MS tools.
 \end{itemize}
 
-\textbf{Note}: - The inputted CSV file should have the same column name
-with demo data. - The column order should be keep same with demo data.
+\textbf{Note}:
 
-\subsection{Parameter setting}\label{parameter-setting}
+\begin{itemize}
+\tightlist
+\item
+  The inputted CSV file should have the same column name with demo data.
+\item
+  The column order should be keep same with demo data.
+\end{itemize}
+
+\subsection{Parameter setting}\label{chapter4d2d2}
 
 In the candidates rank function, users can get more reliable results by
 adjusting parameters according to their experiments. The candidate rank
@@ -706,14 +870,15 @@ function contains parameters as follows:
 \item
   \textbf{Measured CCS}: Experimental CCS of corresponding feature.
 \item
-  \textbf{Candidate list}: A CSV file of candidate (See Ref 4.2.1).
+  \textbf{Candidate list}: A CSV file of candidate (See Section
+  \ref{chapter4d2d1}).
 \item
   \textbf{Rank type}: It consists of CCS filtering and CCS scoring. When
-  choosing CCS filtering, the next option is CCS tolerance (Figure 4.3).
-  It will filter the results that out of the pre-defined CCS tolerance.
-  If you choose CCS scoring, the follow options are showed as Figure
-  4.4. It consists of Minimum tolerance, Maximum tolerance, CCS weight,
-  and MS/MS weight.
+  choosing CCS filtering, the next option is CCS tolerance (Figure
+  \ref{fig:figure4d3}). It will filter the results that out of the
+  pre-defined CCS tolerance. If you choose CCS scoring, the follow
+  options are showed as Figure Figure \ref{fig:figure4d4}. It consists
+  of Minimum tolerance, Maximum tolerance, CCS weight, and MS/MS weight.
 \item
   \textbf{CCS tolerance (±)}: This parameter is available in CCS
   filtering. The tolerance between experimental CCS and theoretical CCS
@@ -734,52 +899,71 @@ function contains parameters as follows:
   MS/MS match score weight to calculate integrated score.
 \end{itemize}
 
-\subsection{Results}\label{results}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter4/figure4.4CCS_scoring} 
+
+}
+
+\caption{CCS scoring}\label{fig:figure4d4}
+\end{figure}
+
+\subsection{Results}\label{chapter4d2d3}
 
 Results of user submission are showed in the ``My projects'' panel
-(Figure 4.2).
+(Figure \ref{fig:figure4d2}).
 
-\subsubsection{CCS filtering}\label{ccs-filtering}
+\subsubsection{CCS filtering}\label{chapter4d2d3d1}
 
 Users can get the detailed information of candidates by clicking the
-browser button (Figure 4.5). In below text, it contains brief
-information for each candidate.
+browser button (Figure \ref{fig:figure4d5}). In below text, it contains
+brief information for each candidate.
 
 \begin{itemize}
 \tightlist
 \item
   \textbf{Rank}: The new rank after filtering with CCS.
 \item
-  \textbf{Name}: Consistent with the name in candidate list (see Ref
-  4.2.1).
+  \textbf{Name}: Consistent with the name in candidate list (see Section
+  \ref{chapter4d2d1}).
 \item
-  \textbf{SMILES}: Consistent with the smiles in candidate list (see Ref
-  4.2.1).
+  \textbf{SMILES}: Consistent with the smiles in candidate list (see
+  Section \ref{chapter4d2d1}).
 \item
   \textbf{InChIKey}: Consistent with the inchikey in candidate list (see
-  Ref 4.2.1).
+  Section \ref{chapter4d2d1}).
 \item
-  \textbf{Adduct}: Consistent with the adduct in candidate list (see Ref
-  4.2.1).
+  \textbf{Adduct}: Consistent with the adduct in candidate list (see
+  Section \ref{chapter4d2d1}).
 \item
   \textbf{MS/MS score}: Consistent with the score in candidate list (see
-  Ref 4.2.1).
+  Section \ref{chapter4d2d1}).
 \item
   \textbf{MS/MS rank}: Consistent with the rank in candidate list (see
-  Ref 4.2.1).
+  Section \ref{chapter4d2d1}).
 \item
   \textbf{Predicted CCS (Å2)}: The predicted CCS with SMILES and
   InChIKey.
 \end{itemize}
 
 Users can also click download to obtain CSV table which contains the
-same information as preview results (Figure 4.5).
+same information as preview results (Figure \ref{fig:figure4d5}).
 
-\subsubsection{CCS scoring}\label{ccs-scoring}
+\begin{figure}
+
+{\centering \includegraphics{images/chapter4/figure4.5candidate_rank_filter} 
+
+}
+
+\caption{CCS filtering result of candidates}\label{fig:figure4d5}
+\end{figure}
+
+\subsubsection{CCS scoring}\label{chapter4d2d3d2}
 
 The results generated with CCS scoring function are similar with results
-from CCS filtering (Figure 4.6). The difference is that CCS scoring has
-two additional columns as CCS score and integrated score.
+from CCS filtering (Figure \ref{fig:figure4d6}). The difference is that
+CCS scoring has two additional columns as CCS score and integrated
+score.
 
 \begin{itemize}
 \tightlist
@@ -792,6 +976,15 @@ two additional columns as CCS score and integrated score.
   linear weighting function according to the user-defined weight for
   each match score.
 \end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics{images/chapter4/figure4.6candidate_rank_scoring} 
+
+}
+
+\caption{CCS scoring result of candidates}\label{fig:figure4d6}
+\end{figure}
 
 \bibliography{book.bib,packages.bib}
 

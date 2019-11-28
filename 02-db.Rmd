@@ -1,7 +1,8 @@
-# CCS Database {#ccsdb}
-<p style=text-align:justify>Unified CCS database aims to be a **unified platform** to host both literature-reported CCS values and in-silico predicted CCS values for ion mobility - mass spectrometry (IM-MS). It is **open-access** and **downloadable**. It contains **3,539 unified CCS values** which are summarized from **5,119 experimental CCS records**. These experimental CCS values are acquired with variable platform including DTIMS, TWIMS and TIMS etc., and have definitive confidence level. In addition, **~10,000,000 predicted CCS** values are provided for **~1,700,000** small molecules from multiple public database to support widespread applications, including metabolomics, lipidomics, drug screening, pesticide screening etc (Table \@ref(tab:dbinfo)). For each compound, its compound card contains meta information, complete records and links to other database. Finally, users can search interested compounds’ CCS values with the function of “Browser” and/or “Advance search” in this part.</p>
+# CCS Database {#chapter2}
+<p style=text-align:justify>Unified CCS database aims to be a **unified platform** to host both literature-reported CCS values and in-silico predicted CCS values for ion mobility - mass spectrometry (IM-MS). It is **open-access** and **downloadable**. It contains 3,539 unified CCS values which are summarized from 5,119 experimental CCS records. These experimental CCS values are acquired with variable platform including DTIMS, TWIMS and TIMS etc., and have definitive confidence level. In addition, **~10,000,000 predicted CCS** values are provided for **~1,700,000** small molecules from multiple public database to support widespread applications, including metabolomics, lipidomics, drug screening, pesticide screening etc (Table \@ref(tab:table2d1)). For each compound, its compound card contains meta information, complete records and links to other database. Finally, users can search interested compounds’ CCS values with the function of “Browser” and/or “Advance search” in this part.</p>
 
-```{r dbinfo, tidy=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+
+```{r table2d1, tidy=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 db_info <- readxl::read_xlsx('tables/database.xlsx')
 db_info <- db_info %>% 
@@ -9,43 +10,66 @@ db_info <- db_info %>%
   dplyr::select(-Links)
 knitr::kable(
   db_info, booktabs = TRUE,
-  caption = 'A table of the first 10 rows of the mtcars data.'
+  caption = 'Basic statistics of Unified CCS database'
 )
 ```
 
-## Compound Browser
-Compound Browser Function provides a simple and straightforward way to browser the database. There are several browser conditions set in “Browser” part (Figure 2.1). 
+## Compound Browser{#chapter2d1}
+<p style=text-align:justify>Compound Browser Function provides a simple and straightforward way to browser the database. There are several browser conditions set in “Browser” part (Figure \@ref(fig:figure2d1)).</p>
 
 - **Type**: It provides the choice of CCS values generated from experiments or prediction. 
--	**Database**: this option includes variable databases that cover all compounds in our unified database (Table \@ref(tab:dbinfo)). And users can choose specific database(s) for further execution. 
--	**Level**: it includes confidence level (ref section 2.2) of compounds in the unified database. It helps to choose compounds in the clearly defined level.
+- **Database**: this option includes variable databases that cover all compounds in our unified database (Table \@ref(tab:table2d1)). And users can choose specific database(s) for further execution. 
+- **Level**: it includes confidence level (See Section \@ref(chapter2d2)) of compounds in the unified database. It helps to choose compounds in the clearly defined level.
 
-With browser conditions, users can screen out a series of interested compounds. Compounds entries would be displayed according to defined condition. In below text, it contains brief information for each compound. 
 
-- **AllCCS ID**: As described in the section 1.2, users can click the link in the column of AllCCS ID to browse the corresponding compound card (Figure 1.2).
+```{r figure2d1, fig.align='center', echo = FALSE, fig.cap='Browser conditions'}
+knitr::include_graphics('images/chapter2/figure2.1browser_condition.png', dpi = NA)
+```
+
+<p style=text-align:justify>With browser conditions, users can screen out a series of interested compounds. Compounds entries would be displayed according to defined condition. In below text, it contains brief information for each compound. </p>
+
+- **AllCCS ID**: As described in the section \@ref(chaptere1d2), users can click the link in the column of AllCCS ID to browse the corresponding compound card (Figure \@ref(fig:FigBrowser1)).
 -	**Name**: compound name
 - **Structure**: the image of compound structure
 - **Formula**: chemical formula
-- **Experimental CCS**: The unified CCS value reported in literature (See Ref 2.2.3)
-- **Predicted CCS**: The predicted CCS values using machine-learning algorithm. (See Ref 2.2.4)
-- **Highest level**: The highest confidence level of CCS values (See Ref 2.2.2)
+- **Experimental CCS**: The unified CCS value reported in literature (See Section \@ref(chapter2d2d3))
+- **Predicted CCS**: The predicted CCS values using machine-learning algorithm. (See Section \@ref(chapter2d2d4))
+- **Highest level**: The highest confidence level of CCS values (See Section \@ref(chapter2d2d2))
 
-Users can check the interested compounds in the last column. Click the download option, you could download a CSV table containing the information of you checked compounds (Figure 2.2). 
+<p style=text-align:justify>Users can check the interested compounds in the last column. Click the download option, you could download a CSV table containing the information of you checked compounds (Figure \@ref(fig:figure2d2)). </p>
 
 **Note**: 
 
 - Download function supports up to **100** items for one time.
 
+```{r figure2d2, fig.align='center', echo = FALSE, fig.cap='Download interested compounds'}
+knitr::include_graphics('images/chapter2/figure2.2browser_download_new.png', dpi = NA)
+```
+
+## Compound Card{#chapter2d2}
+<p style=text-align:justify>In the compound card, it contains detail information of the compound. Next, we would like to explain each parts in the compound card.</p>
+
+### Compound information{#chapter2d2d1}
+<p style=text-align:justify>It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure \@ref(fig:figure2d3)). Here, [ClassyFire](http://classyfire.wishartlab.com)  is used for compounds’ classification **【ref8】**.</p>
+
+```{r figure2d3, fig.align='center', echo = FALSE, fig.cap='Download interested compounds'}
+knitr::include_graphics('images/chapter2/figure2.3compound_card_information.png', dpi = NA)
+```
 
 
-## Compound Card
-In the compound card, it contains detail information of the compound. Next, we would like to explain each parts in the compound card.
+### Unified CCS{#chapter2d2d2}
+<p style=text-align:justify>This part contains the CCS information of different adduct forms with experimental CCS (if exists) and predicted CCS (Figure \@ref(fig:figure2d4)). The CCS reported here is the unified CCS values. We defined unified CCS as the average CCS value with definitive confidence level. The definition of confidence level can find in Table \@ref(tab:table2d2). CCS values of confidence 1, 2, 3 are all experimental values. The definition of confidence level: </p>
 
-### Compound information
-It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure 2.3). Here, ClassyFire (http://classyfire.wishartlab.com) is used for compounds’ classification 【ref】.
 
-### Unified CCS
-This part contains the CCS information of different adduct forms with experimental CCS (if exists) and predicted CCS (Figure 2.4). The CCS reported here is the unified CCS values. We defined unified CCS as the average CCS value with definitive confidence level. The definition of confidence level can find in Table 2.2. CCS values of confidence 1, 2, 3 are all experimental values. The definition of confidence level: 
+```{r table2d2, tidy=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+temp <- readxl::read_xlsx('tables/confidence_level.xlsx')
+knitr::kable(
+  temp, booktabs = TRUE,
+  caption = 'Definition of confidence level'
+)
+```
+<br>
 
 - **Confidence level 1** represents the CCS value of the specie which is acquired with DTIMS and has been reported at least twice in different labs with the maximum relative error less than 1%.
 - **Confidence level 2** represents the CCS value of specie which is acquired with DTIMS, TWIMS or TIMS and has been reported at least twice in different labs with the maximum relative error less than 3%. 
@@ -53,31 +77,63 @@ This part contains the CCS information of different adduct forms with experiment
 - **Confidence level 4** represents the predicted CCS value. 
 - **Conflict** means the CCS value of specie which is acquired with DTIMS, TWIMS or TIMS and has been reported at least twice in different labs, but the maximum relative error is more than 3%.
 
-### Experimental CCS records
-This part records the detailed information of experimental CCS values (Figure 2.5). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in table 2.3. The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.
+<br>
+```{r figure2d4, fig.align='center', echo = FALSE, fig.cap='Unified CCS'}
+knitr::include_graphics('images/chapter2/figure2.4unified_ccs.png', dpi = NA)
+```
 
-### Predicted CCS records
-This part records the detailed information of predicted CCS values (Figure 2.6). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference our paper (XXXX) for details. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.
 
-### Database link
-This part provides the link to databases that contain the compound.
+### Experimental CCS records{#chapter2d2d3}
+<p style=text-align:justify>This part records the detailed information of experimental CCS values (Figure \@ref(fig:figure2d5)). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in Table 2.3. The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.</p>
 
-## Advanced Search
-For advanced search, there are two modes for users to search the compounds in our unified CCS database, including **“single mode”** and **“batch mode”**.
 
-### Single mode
-As named, users can search for one compounds at one time in single mode. Here, we provide several optional identifiers for users to choose (Figure 2.8), including compound’s name, database ID, formula, SMILES, InChI, InChIKey. 
+```{r figure2d5, fig.align='center', echo = FALSE, fig.cap='Experimental CCS records'}
+knitr::include_graphics('images/chapter2/figure2.5compound_card_exp_ccs.png', dpi = NA)
+```
+
+
+### Predicted CCS records{#chapter2d2d4}
+<p style=text-align:justify>This part records the detailed information of predicted CCS values (Figure \@ref(fig:figure2d6)). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference our in pressing paper **(XXXX)**  for detailed information. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.</p>
+
+```{r figure2d6, fig.align='center', echo = FALSE, fig.cap='Predicted CCS records'}
+knitr::include_graphics('images/chapter2/figure2.6predicted_ccs.png', dpi = NA)
+```
+
+
+### Database link{#chapter2d2d5}
+<p style=text-align:justify>This part provides the link to databases that contain the compound (Figure \@ref(fig:figure2d7)).</p>
+
+```{r figure2d7, fig.align='center', echo = FALSE, fig.cap='Database link'}
+knitr::include_graphics('images/chapter2/figure2.7database_link.png', dpi = NA)
+```
+
+## Advanced Search{#chapter2d3}
+<p style=text-align:justify>For advanced search, there are two modes for users to search the compounds in our unified CCS database, including **“single mode”** and **“batch mode”**.</p>
+
+### Single mode{#chapter2d3d1}
+<p style=text-align:justify>As named, users can search for one compounds at one time in single mode. Here, we provide several optional identifiers for users to choose (Figure \@ref(fig:figure2d8)), including compound’s name, database ID, formula, SMILES, InChI, InChIKey. </p>
 
 **Note**:
 
 - If you don’t have confirmed identifier, keep it as null. 
 - If there are contradictory identifier, it will return no available data.
 
-### Batch mode
-If there are multiple compounds, users can use batch mode to search. Currently, this function supports identifiers including “Database ID”, SMILES, InChIKey. While choosing database ID as identifier, there are several choice of databases in the right panel close to identifier option. 
+
+```{r figure2d8, fig.align='center', echo = FALSE, fig.cap='Advanced search – single mode'}
+knitr::include_graphics('images/chapter2/figure2.8advance_search_single.png', dpi = NA)
+```
+
+
+### Batch mode{#chapter2d3d2}
+<p style=text-align:justify>If there are multiple compounds, users can use batch mode to search (Figure \@ref(fig:figure2d9)). Currently, this function supports identifiers including “Database ID”, SMILES, InChIKey. While choosing database ID as identifier, there are several choice of databases in the right panel close to identifier option.  </p>
 
 **Note**: 
 
 - In searching panel, you can enter one item per line.
 - It should not contain extra space. 
 - It supports up to 100 query items per request.
+
+
+```{r figure2d9, fig.align='center', echo = FALSE, fig.cap='Advanced search – batch mode'}
+knitr::include_graphics('images/chapter2/figure2.9advance_search_batch.png', dpi = NA)
+```

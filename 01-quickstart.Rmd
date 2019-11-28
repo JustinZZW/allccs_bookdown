@@ -1,6 +1,6 @@
-# Quick Start Guide
+# Quick Start Guide{#chapter1}
 
-## Create a AllCCS Account
+## Create a AllCCS Account{#chaptere1d1}
 <p style=text-align:justify>Users need to register AllCCS account to use the webserver. This process is very sample, and **completely private**. To register an account, navigate to the home page. The “Sign up” button is in the upper right corner of the page. Then, you need to fill in your email and verification code which would be sent to your email (Figure \@ref(fig:FigRegister)). Finally, input some basic information to complete the registration. You could log in and enjoy all functions in the web server.</p>
 
 ```{r FigRegister, fig.align='center', echo = FALSE, fig.cap='Register AllCCS account'}
@@ -8,30 +8,30 @@ knitr::include_graphics('images/chapter1/register_1.png', dpi = NA)
 ```
 
 
-## Browser CCS database
+## Browser CCS database{#chaptere1d2}
 <p style=text-align:justify>You could search you interested compound (name, formula, smiles, inchi, InChIKey etc.) in the search box in navigation bar, or directly browser the all database records in the “browser” page (Figure \@ref(fig:FigBrowser1)).</p>
 
-```{r FigBrowser1, fig.align='center', echo = FALSE, fig.cap='Register AllCCS account'}
+```{r FigBrowser1, fig.align='center', echo = FALSE, fig.cap='Browser CCS database'}
 knitr::include_graphics('images/chapter1/browser_1.png', dpi = NA)
 ```
 
-<p style=text-align:justify>Then, you can click the link in the column of AllCCS ID to browser detail information of this compound (Figure \@ref(fig:FigBrowser2)). It includes basic meta information, unified CCS values, experimental CCS records, predicted CCS records and other database links etc. Please see section \@ref(ccsdb) for more details.</p>
+<p style=text-align:justify>Then, you can click the link in the column of AllCCS ID to browser detail information of this compound (Figure \@ref(fig:FigBrowser2)). It includes basic meta information, unified CCS values, experimental CCS records, predicted CCS records and other database links etc. Please see section \@ref(chapter2) for more details.</p>
 
-```{r FigBrowser2, fig.align='center', echo = FALSE, fig.cap='Register AllCCS account'}
+```{r FigBrowser2, fig.align='center', echo = FALSE, fig.cap='Details of compounds'}
 knitr::include_graphics('images/chapter1/browser_2.png', dpi = NA)
 ```
 
-## Perform CCS prediction/Annotation
+## Perform CCS prediction/Annotation{#chaptere1d3}
 
 <p style=text-align:justify>AllCCS also provides CCS prediction function (Section \@ref(ccsprediction)) and metabolite annotation functions (Section \@ref(metannotation)). You could click the link or corresponding item in navigation bar. For CCS prediction function, please input the SMILES list of your compounds in the input panel. The result would be returned on the project panel within several seconds (Figure \@ref(fig:FigPrediction)).</p>
 
-```{r FigPrediction, fig.align='center', echo = FALSE, fig.cap='Register AllCCS account'}
+```{r FigPrediction, fig.align='center', echo = FALSE, fig.cap='CCS prediction function'}
 knitr::include_graphics('images/chapter1/prediction.png', dpi = NA)
 ```
 
 
 <p style=text-align:justify>For annotation function, you could search experimental feature to search the database with your settings, or filter/rerank candidates to conjunct with MS/MS annotation tools (Figure \@ref(fig:FigMatch)). </p>
 
-```{r FigMatch, fig.align='center', echo = FALSE, fig.cap='Register AllCCS account'}
+```{r FigMatch, fig.align='center', echo = FALSE, fig.cap='Metabolite match and candidate rank'}
 knitr::include_graphics('images/chapter1/match.png', dpi = NA)
 ```

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 CCS Prediction | AllCCS Tutorial V1.00</title>
+  <meta name="description" content="A user guide for AllCCS webserver." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 CCS Prediction | AllCCS Tutorial V1.00" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://allccs.zhulab.cn/" />
+  <meta property="og:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
+  <meta property="og:description" content="A user guide for AllCCS webserver." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 CCS Prediction | AllCCS Tutorial V1.00" />
+  
+  <meta name="twitter:description" content="A user guide for AllCCS webserver." />
+  <meta name="twitter:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
+
+<meta name="author" content="Zhiwei Zhou" />
+
+
+<meta name="date" content="2019-11-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chapter2.html"/>
+<link rel="next" href="chapter4.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">AllCCS Tutorial V1.00</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About AllCCS</a></li>
+<li class="chapter" data-level="" data-path="citation.html"><a href="citation.html"><i class="fa fa-check"></i>Citation</a></li>
+<li class="chapter" data-level="" data-path="news.html"><a href="news.html"><i class="fa fa-check"></i>News</a></li>
+<li class="chapter" data-level="1" data-path="chapter1.html"><a href="chapter1.html"><i class="fa fa-check"></i><b>1</b> Quick Start Guide</a><ul>
+<li class="chapter" data-level="1.1" data-path="chapter1.html"><a href="chapter1.html#chaptere1d1"><i class="fa fa-check"></i><b>1.1</b> Create a AllCCS Account</a></li>
+<li class="chapter" data-level="1.2" data-path="chapter1.html"><a href="chapter1.html#chaptere1d2"><i class="fa fa-check"></i><b>1.2</b> Browser CCS database</a></li>
+<li class="chapter" data-level="1.3" data-path="chapter1.html"><a href="chapter1.html#chaptere1d3"><i class="fa fa-check"></i><b>1.3</b> Perform CCS prediction/Annotation</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter2.html"><a href="chapter2.html"><i class="fa fa-check"></i><b>2</b> CCS Database</a><ul>
+<li class="chapter" data-level="2.1" data-path="chapter2.html"><a href="chapter2.html#chapter2d1"><i class="fa fa-check"></i><b>2.1</b> Compound Browser</a></li>
+<li class="chapter" data-level="2.2" data-path="chapter2.html"><a href="chapter2.html#chapter2d2"><i class="fa fa-check"></i><b>2.2</b> Compound Card</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d1"><i class="fa fa-check"></i><b>2.2.1</b> Compound information</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d2"><i class="fa fa-check"></i><b>2.2.2</b> Unified CCS</a></li>
+<li class="chapter" data-level="2.2.3" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d3"><i class="fa fa-check"></i><b>2.2.3</b> Experimental CCS records</a></li>
+<li class="chapter" data-level="2.2.4" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d4"><i class="fa fa-check"></i><b>2.2.4</b> Predicted CCS records</a></li>
+<li class="chapter" data-level="2.2.5" data-path="chapter2.html"><a href="chapter2.html#chapter2d2d5"><i class="fa fa-check"></i><b>2.2.5</b> Database link</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter2.html"><a href="chapter2.html#chapter2d3"><i class="fa fa-check"></i><b>2.3</b> Advanced Search</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter2.html"><a href="chapter2.html#chapter2d3d1"><i class="fa fa-check"></i><b>2.3.1</b> Single mode</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chapter2.html"><a href="chapter2.html#chapter2d3d2"><i class="fa fa-check"></i><b>2.3.2</b> Batch mode</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter3.html"><a href="chapter3.html"><i class="fa fa-check"></i><b>3</b> CCS Prediction</a><ul>
+<li class="chapter" data-level="3.1" data-path="chapter3.html"><a href="chapter3.html#chapter3d1"><i class="fa fa-check"></i><b>3.1</b> Data preparation</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="chapter3.html"><a href="chapter3.html#chapter3d1d1"><i class="fa fa-check"></i><b>3.1.1</b> Direct input in the panel</a></li>
+<li class="chapter" data-level="3.1.2" data-path="chapter3.html"><a href="chapter3.html#chapter3d1d2"><i class="fa fa-check"></i><b>3.1.2</b> Prediction with uploading CSV file</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="chapter3.html"><a href="chapter3.html#chapter3d2"><i class="fa fa-check"></i><b>3.2</b> Result</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter4.html"><a href="chapter4.html"><i class="fa fa-check"></i><b>4</b> Metabolite Annotation</a><ul>
+<li class="chapter" data-level="4.1" data-path="chapter4.html"><a href="chapter4.html#chapter4d1"><i class="fa fa-check"></i><b>4.1</b> Feature to candidates (Feature match)</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter4.html"><a href="chapter4.html#chapter4d2"><i class="fa fa-check"></i><b>4.2</b> Complement to MS/MS result (Candidate rank)</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="chapter4.html"><a href="chapter4.html#chapter4d2d1"><i class="fa fa-check"></i><b>4.2.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="chapter4.html"><a href="chapter4.html#chapter4d2d2"><i class="fa fa-check"></i><b>4.2.2</b> Parameter setting</a></li>
+<li class="chapter" data-level="4.2.3" data-path="chapter4.html"><a href="chapter4.html#chapter4d2d3"><i class="fa fa-check"></i><b>4.2.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="http://www.zhulab.cn/" target="blank">Zhu Lab</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">AllCCS Tutorial V1.00</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter3" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> CCS Prediction</h1>
+<p style="text-align:justify">
+This part provides a machine-learning based CCS prediction function with the input of SMILES structures. The prediction error is estimated as low as ~2% (Median relative error), and users could predict CCS values for novel structures. Detail of prediction is provided in our AllCCS article <strong>【ref10】</strong>.
+</p>
+<div id="chapter3d1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Data preparation</h2>
+<p style="text-align:justify">
+For CCS prediction, users should provide the SMILES and the unique identifier for each SMILES. And there are two approaches for users to search in the interface (Figure <a href="chapter3.html#fig:figure3d1">3.1</a>).
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure3d1"></span>
+<img src="images/chapter3/figure3.1prediction.png" alt="CCS prediction"  />
+<p class="caption">
+Figure 3.1: CCS prediction
+</p>
+</div>
+<div id="chapter3d1d1" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Direct input in the panel</h3>
+<p style="text-align:justify">
+Users can directly search in the panel with one entry per line containing one identifier and one SMILES. When the input is complete, click submit to get the predicted results.
+</p>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>The line must be tab-separated.</li>
+<li>The identifiers must be unique in one submission.</li>
+<li>Due to the limit of computational resource, the maximum item is limited as 50 for one submission.</li>
+</ul>
+</div>
+<div id="chapter3d1d2" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Prediction with uploading CSV file</h3>
+<p style="text-align:justify">
+It is also available for prediction by uploading a CSV file. Users can download the CSV demo file, and the data format of the CSV file is showed in the Figure <a href="chapter3.html#fig:figure3d1">3.1</a>. The first column contains the identifier of each SMILES and the second column is the corresponding SMILES. The format of CSV file is same as the inputting panel. Please note that the identifiers must be unique in one file, and the maximum item is limited as <strong>50</strong> for one file.
+</p>
+</div>
+</div>
+<div id="chapter3d2" class="section level2">
+<h2><span class="header-section-number">3.2</span> Result</h2>
+<p style="text-align:justify">
+Results of user submissions are showed in the “My projects” panel (Figure <a href="chapter3.html#fig:figure3d2">3.2</a>).
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure3d2"></span>
+<img src="images/chapter3/figure3.2prediction_result.png" alt="CCS prediction results"  />
+<p class="caption">
+Figure 3.2: CCS prediction results
+</p>
+</div>
+<p style="text-align:justify">
+With preview conditions, users can get the detailed result of inputted SMILES (Figure <a href="chapter3.html#fig:figure3d3">3.3</a>). Compounds entries would be sorted by different adduct information. In below texts, it contains brief information for each compound.
+</p>
+<ul>
+<li><strong>Name</strong>: Consistent with the identifiers you input.</li>
+<li><strong>SMILES</strong>: SMILES structures.</li>
+<li><strong>Monoisotopic mass</strong>: Monoisotopic mass of structure</li>
+<li><strong>Adduct</strong>: The adduct form. AllCCS provides 7 adducts forms (Positive mode: [M+H]+, [M+Na]+, [M-H2O+H]+, [M+NH4]+; Negative mode: [M-H]-, [M+Na-2H]-, [M+HCOO]-).</li>
+<li><strong>m/z</strong>: The ratio of mass and charge</li>
+<li><strong>Predicted CCS</strong>: CCS value for the specific structure and adduct.</li>
+<li><strong>RSS</strong>: Representative structure similarity. See Section <a href="chapter2.html#chapter2d2d4">2.2.4</a> for more information.</li>
+<li><strong>Status</strong>:
+<ul>
+<li><strong>Valid</strong>: Successful prediction</li>
+<li><strong>Error1</strong>: Invalid SMILES structure</li>
+<li><strong>Error2</strong>: The mass range is out of the limitation (AllCCS only supports small compound CCS prediction with mass between 60-1200).</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:figure3d3"></span>
+<img src="images/chapter3/figure3.3preview_result.png" alt="Preview results"  />
+<p class="caption">
+Figure 3.3: Preview results
+</p>
+</div>
+<p style="text-align:justify">
+Users can also click download to obtain CSV table which contains the same information as preview results (Figure <a href="chapter3.html#fig:figure3d4">3.4</a>).
+</p>
+<div class="figure" style="text-align: center"><span id="fig:figure3d4"></span>
+<img src="images/chapter3/figure3.4download_result.png" alt="Download results"  />
+<p class="caption">
+Figure 3.4: Download results
+</p>
+</div>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>Due to the computation resource limitation, it allows up to 10 projects one time in “<em>My projects panel</em>”. If users want to execute more projects, please delete previous projects.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["allccs_bookdown.pdf", "allccs_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
