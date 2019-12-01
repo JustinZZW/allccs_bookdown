@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html >
+
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 CCS Database | AllCCS Tutorial V1.00</title>
-  <meta name="description" content="A user guide for AllCCS webserver." />
-  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AllCCS Tutorial V1.00</title>
+  <meta name="description" content="A user guide for AllCCS webserver.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 2 CCS Database | AllCCS Tutorial V1.00" />
+  <meta property="og:title" content="AllCCS Tutorial V1.00" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://allccs.zhulab.cn/" />
   <meta property="og:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
@@ -16,33 +17,29 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 CCS Database | AllCCS Tutorial V1.00" />
+  <meta name="twitter:title" content="AllCCS Tutorial V1.00" />
   
   <meta name="twitter:description" content="A user guide for AllCCS webserver." />
   <meta name="twitter:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
 
-<meta name="author" content="Zhiwei Zhou" />
+<meta name="author" content="Zhiwei Zhou">
 
 
-<meta name="date" content="2019-11-01" />
+<meta name="date" content="2019-11-01">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="chapter1.html"/>
-<link rel="next" href="chapter3.html"/>
+<link rel="prev" href="chapter1.html">
+<link rel="next" href="chapter3.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -151,7 +148,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">16085</td>
 <td align="left">Metabolites &amp; lipids</td>
 <td align="left">2018-08-02</td>
-<td align="left">Kanehisa et al.1</td>
+<td align="left"><span class="citation">Kanehisa and Goto (<a href="#ref-reference1">2000</a>)</span></td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
@@ -159,7 +156,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">113989</td>
 <td align="left">Metabolites &amp; lipids</td>
 <td align="left">2018-06-09</td>
-<td align="left">Wishart et al.2</td>
+<td align="left"><span class="citation">D. S. Wishart, Feunang, et al. (<a href="#ref-reference2">2017</a><a href="#ref-reference2">b</a>)</span></td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
@@ -167,7 +164,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">40532</td>
 <td align="left">Metabolites &amp; lipids</td>
 <td align="left">2019-07-11</td>
-<td align="left">Fahy et al.3</td>
+<td align="left"><span class="citation">Fahy et al. (<a href="#ref-reference3">2008</a>)</span></td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
@@ -175,7 +172,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">592175</td>
 <td align="left">Metabolites &amp; lipids</td>
 <td align="left">2018-02-07</td>
-<td align="left">Jeffryes et al.4</td>
+<td align="left"><span class="citation">Jeffryes et al. (<a href="#ref-reference4">2015</a>)</span></td>
 </tr>
 <tr class="odd">
 <td align="right">5</td>
@@ -183,7 +180,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">9546</td>
 <td align="left">Drugs &amp; xenobiolics</td>
 <td align="left">2019-04-12</td>
-<td align="left">Wishart et al.5</td>
+<td align="left"><span class="citation">D. S. Wishart, Feunang, et al. (<a href="#ref-reference5">2017</a><a href="#ref-reference5">a</a>)</span></td>
 </tr>
 <tr class="even">
 <td align="right">6</td>
@@ -191,7 +188,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">856919</td>
 <td align="left">Drugs &amp; xenobiolics</td>
 <td align="left">2019-05-06</td>
-<td align="left">Grulke et al.6</td>
+<td align="left"><span class="citation">M.Grulke et al. (<a href="#ref-reference6">2019</a>)</span></td>
 </tr>
 <tr class="odd">
 <td align="right">7</td>
@@ -199,7 +196,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">213188</td>
 <td align="left">Natural products</td>
 <td align="left">2019-06-13</td>
-<td align="left">Gu et al.7</td>
+<td align="left"><span class="citation">Gu et al. (<a href="#ref-reference7">2013</a>)</span></td>
 </tr>
 <tr class="even">
 <td align="right">8</td>
@@ -207,7 +204,7 @@ Unified CCS database aims to be a <strong>unified platform</strong> to host both
 <td align="right">1417</td>
 <td align="left">Metabolites &amp; lipids</td>
 <td align="left">2018-09-02</td>
-<td align="left">NA</td>
+<td align="left"><span class="citation">Zhou et al. (<a href="#ref-reference10">2020</a>)</span></td>
 </tr>
 </tbody>
 </table>
@@ -261,7 +258,7 @@ In the compound card, it contains detail information of the compound. Next, we w
 <div id="chapter2d2d1" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Compound information</h3>
 <p style="text-align:justify">
-It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure <a href="chapter2.html#fig:figure2d3">2.3</a>). Here, <a href="http://classyfire.wishartlab.com">ClassyFire</a> is used for compounds’ classification <strong>【ref8】</strong>.
+It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure <a href="chapter2.html#fig:figure2d3">2.3</a>). Here, <a href="http://classyfire.wishartlab.com">ClassyFire</a> is used for compounds’ classification <span class="citation">(Feunang et al. <a href="#ref-reference8">2065</a>)</span>.
 </p>
 <div class="figure" style="text-align: center"><span id="fig:figure2d3"></span>
 <img src="images/chapter2/figure2.3compound_card_information.png" alt="Download interested compounds"  />
@@ -342,8 +339,55 @@ Figure 2.4: Unified CCS
 <div id="chapter2d2d3" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> Experimental CCS records</h3>
 <p style="text-align:justify">
-This part records the detailed information of experimental CCS values (Figure <a href="chapter2.html#fig:figure2d5">2.5</a>). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in Table 2.3. The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.
+This part records the detailed information of experimental CCS values (Figure <a href="chapter2.html#fig:figure2d5">2.5</a>). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in Table <a href="chapter2.html#tab:table2d3">2.3</a>. The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.
 </p>
+<table>
+<caption><span id="tab:table2d3">Table 2.3: </span>IM-MS Instruments in AllCCS</caption>
+<thead>
+<tr class="header">
+<th align="left">Instrument</th>
+<th align="left">Type</th>
+<th align="left">Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Agilent 6560 DTIM-QTOF</td>
+<td align="left">DTIMS</td>
+<td align="left">Agilent</td>
+</tr>
+<tr class="even">
+<td align="left">Waters Synapt G2-Si HDMS</td>
+<td align="left">TWIMS</td>
+<td align="left">Waters</td>
+</tr>
+<tr class="odd">
+<td align="left">Waters Synapt G2 HDMS</td>
+<td align="left">TWIMS</td>
+<td align="left">Waters</td>
+</tr>
+<tr class="even">
+<td align="left">Waters Vion IMS QTOF</td>
+<td align="left">TWIMS</td>
+<td align="left">Waters</td>
+</tr>
+<tr class="odd">
+<td align="left">TOFwerk IMS TOF</td>
+<td align="left">DTIMS</td>
+<td align="left">TOFwerk</td>
+</tr>
+<tr class="even">
+<td align="left">Bruker timsTOF</td>
+<td align="left">TIMS</td>
+<td align="left">Bruker</td>
+</tr>
+<tr class="odd">
+<td align="left">Bruker timsTOF Pro</td>
+<td align="left">TIMS</td>
+<td align="left">Bruker</td>
+</tr>
+</tbody>
+</table>
 <div class="figure" style="text-align: center"><span id="fig:figure2d5"></span>
 <img src="images/chapter2/figure2.5compound_card_exp_ccs.png" alt="Experimental CCS records"  />
 <p class="caption">
@@ -354,7 +398,7 @@ Figure 2.5: Experimental CCS records
 <div id="chapter2d2d4" class="section level3">
 <h3><span class="header-section-number">2.2.4</span> Predicted CCS records</h3>
 <p style="text-align:justify">
-This part records the detailed information of predicted CCS values (Figure <a href="chapter2.html#fig:figure2d6">2.6</a>). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference our in pressing paper <strong>(XXXX)</strong> for detailed information. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.
+This part records the detailed information of predicted CCS values (Figure <a href="chapter2.html#fig:figure2d6">2.6</a>). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference AllCCS paper for detailed information <span class="citation">(Zhou et al. <a href="#ref-reference10">2020</a>)</span>. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.
 </p>
 <div class="figure" style="text-align: center"><span id="fig:figure2d6"></span>
 <img src="images/chapter2/figure2.6predicted_ccs.png" alt="Predicted CCS records"  />
@@ -419,6 +463,36 @@ Figure 2.9: Advanced search – batch mode
 </div>
 </div>
 </div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-reference1">
+<p>Kanehisa, Minoru, and Susumu Goto. 2000. “KEGG: Kyoto Encyclopedia of Genes and Genomes.” <em>Nucleic Acids Research</em>, 27–30. doi:<a href="https://doi.org/10.1093/nar/28.1.27">10.1093/nar/28.1.27</a>.</p>
+</div>
+<div id="ref-reference2">
+<p>Wishart, David S, Yannick Djoumbou Feunang, Ana Marcu, An Chi Guo, Kevin Liang, Rosa Vázquez-Fresno, Tanvir Sajed, et al. 2017b. “HMDB 4.0: The Human Metabolome Database for 2018.” <em>Nucleic Acids Research</em>, D608–D617. doi:<a href="https://doi.org/10.1093/nar/gkx1089">10.1093/nar/gkx1089</a>.</p>
+</div>
+<div id="ref-reference3">
+<p>Fahy, Eoin, Shankar Subramaniam, Robert C. Murphy, Masahiro Nishijima, Christian R. H. Raetz, Takao Shimizu, Friedrich Spener, Gerrit van Meer, Michael J. O. Wakelam, and Edward A. Dennis. 2008. “Update of the Lipid Maps Comprehensive Classification System for Lipids.” <em>The Journal of Lipid Research</em>, S9–S14. doi:<a href="https://doi.org/10.1194/jlr.R800095-JLR200">10.1194/jlr.R800095-JLR200</a>.</p>
+</div>
+<div id="ref-reference4">
+<p>Jeffryes, James G, Ricardo L Colastani, Mona Elbadawi-Sidhu, Tobias Kind, Thomas D Niehaus, Linda J Broadbelt, Andrew D Hanson, Oliver Fiehn, Keith E J Tyo, and Christopher S Henry. 2015. “MINEs: Open Access Databases of Computationally Predicted Enzyme Promiscuity Products for Untargeted Metabolomics.” <em>Journal of Cheminformatics</em>, no. 44. doi:<a href="https://doi.org/10.1186/s13321-015-0087-1">10.1186/s13321-015-0087-1</a>.</p>
+</div>
+<div id="ref-reference5">
+<p>Wishart, David S, Yannick D Feunang, An C Guo, Elvis J Lo, Ana Marcu, Jason R Grant, Tanvir Sajed, et al. 2017a. “DrugBank 5.0: A Major Update to the Drugbank Database for 2018.” <em>Nucleic Acids Research</em>, D1074–D1082. doi:<a href="https://doi.org/10.1093/nar/gkx1037">10.1093/nar/gkx1037</a>.</p>
+</div>
+<div id="ref-reference6">
+<p>M.Grulke, Christopher, Antony J.Williams, InthiranyThillanadarajah, and Ann M.Richard. 2019. “EPA’s Dsstox Database: History of Development of a Curated Chemistry Resource Supporting Computational Toxicology Research.” <em>Computational Toxicology</em>, no. 100096. doi:<a href="https://doi.org/10.1016/j.comtox.2019.100096">10.1016/j.comtox.2019.100096</a>.</p>
+</div>
+<div id="ref-reference7">
+<p>Gu, Jiangyong, Yuanshen Gui, Lirong Chen, Gu Yuan, Hui-Zhe Lu, and Xiaojie Xu. 2013. “Use of Natural Products as Chemical Library for Drug Discovery and Network Pharmacology.” <em>Nucleic Acids Research</em>, no. e62839. doi:<a href="https://doi.org/10.1371/journal.pone.0062839">10.1371/journal.pone.0062839</a>.</p>
+</div>
+<div id="ref-reference10">
+<p>Zhou, Zhiwei, Mingdu Luo, Xi Chen, and Zheng-Jiang Zhu. 2020. “Advancing Ccs Database Towards Metabolite Annotation.” <em>In Preparing</em>.</p>
+</div>
+<div id="ref-reference8">
+<p>Feunang, Yannick Djoumbou, Roman Eisner, Craig Knox, Leonid Chepelev, Janna Hastings, Gareth Owen, Eoin Fahy, et al. 2065. “ClassyFire: Automated Chemical Classification with a Comprehensive, Computable Taxonomy.” <em>Journal of Cheminformatics</em>, no. 61. doi:<a href="https://doi.org/10.1186/s13321-016-0174-y">10.1186/s13321-016-0174-y</a>.</p>
+</div>
+</div>
             </section>
 
           </div>
@@ -430,13 +504,11 @@ Figure 2.9: Advanced search – batch mode
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -447,7 +519,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapaper": false,
+"instapper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -457,10 +529,6 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
-},
-"history": {
 "link": null,
 "text": null
 },

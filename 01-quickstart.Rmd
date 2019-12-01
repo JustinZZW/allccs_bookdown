@@ -23,7 +23,7 @@ knitr::include_graphics('images/chapter1/browser_2.png', dpi = NA)
 
 ## Perform CCS prediction/Annotation{#chaptere1d3}
 
-<p style=text-align:justify>AllCCS also provides CCS prediction function (Section \@ref(ccsprediction)) and metabolite annotation functions (Section \@ref(metannotation)). You could click the link or corresponding item in navigation bar. For CCS prediction function, please input the SMILES list of your compounds in the input panel. The result would be returned on the project panel within several seconds (Figure \@ref(fig:FigPrediction)).</p>
+<p style=text-align:justify>AllCCS also provides CCS prediction function (Section \@ref(chapter3)) and metabolite annotation functions (Section \@ref(chapter4)). You could click the link or corresponding item in navigation bar. For CCS prediction function, please input the SMILES list of your compounds in the input panel. The result would be returned on the project panel within several seconds (Figure \@ref(fig:FigPrediction)).</p>
 
 ```{r FigPrediction, fig.align='center', echo = FALSE, fig.cap='CCS prediction function'}
 knitr::include_graphics('images/chapter1/prediction.png', dpi = NA)

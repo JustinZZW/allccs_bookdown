@@ -1,4 +1,8 @@
 # News {-}
+**December 1, 2019** <br>
+
+- Add reference for tutorial
+
 **November 25, 2019** <br>
 
 - Update tutorial

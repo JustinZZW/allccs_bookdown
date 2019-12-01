@@ -21,6 +21,7 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
@@ -72,7 +73,7 @@
 \usepackage{titling}
 
 % Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
+\newcommand{\subtitle}[1]{
   \posttitle{
     \begin{center}\large#1\end{center}
     }
@@ -92,6 +93,20 @@
 
 \usepackage{booktabs}
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -144,6 +159,14 @@ If AllCCS is useful in your project, please cite our articles.
 
 \chapter*{News}\label{news}
 \addcontentsline{toc}{chapter}{News}
+
+\textbf{December 1, 2019}
+
+\begin{itemize}
+\tightlist
+\item
+  Add reference for tutorial
+\end{itemize}
 
 \textbf{November 25, 2019}
 
@@ -234,13 +257,12 @@ section \ref{chapter2} for more details.
 
 \section{Perform CCS prediction/Annotation}\label{chaptere1d3}
 
-AllCCS also provides CCS prediction function (Section
-\ref{ccsprediction}) and metabolite annotation functions (Section
-\ref{metannotation}). You could click the link or corresponding item in
-navigation bar. For CCS prediction function, please input the SMILES
-list of your compounds in the input panel. The result would be returned
-on the project panel within several seconds (Figure
-\ref{fig:FigPrediction}).
+AllCCS also provides CCS prediction function (Section \ref{chapter3})
+and metabolite annotation functions (Section \ref{chapter4}). You could
+click the link or corresponding item in navigation bar. For CCS
+prediction function, please input the SMILES list of your compounds in
+the input panel. The result would be returned on the project panel
+within several seconds (Figure \ref{fig:FigPrediction}).
 
 \begin{figure}
 
@@ -290,15 +312,15 @@ users can search interested compounds' CCS values with the function of
 \toprule
 No. & Database & Compounds & Coverage & Mirror date & Reference\\
 \midrule
-1 & [KEGG](https://www.genome.jp/kegg/) & 16085 & Metabolites \& lipids & 2018-08-02 & Kanehisa et al.1\\
-2 & [HMDB](http://www.hmdb.ca/) & 113989 & Metabolites \& lipids & 2018-06-09 & Wishart et al.2\\
-3 & [LMSD](https://www.lipidmaps.org/) & 40532 & Metabolites \& lipids & 2019-07-11 & Fahy et al.3\\
-4 & [MINE](https://minedatabase.mcs.anl.gov/) & 592175 & Metabolites \& lipids & 2018-02-07 & Jeffryes et al.4\\
-5 & [DrugBank](https://www.drugbank.ca/) & 9546 & Drugs \& xenobiolics & 2019-04-12 & Wishart et al.5\\
+1 & [KEGG](https://www.genome.jp/kegg/) & 16085 & Metabolites \& lipids & 2018-08-02 & @reference1\\
+2 & [HMDB](http://www.hmdb.ca/) & 113989 & Metabolites \& lipids & 2018-06-09 & @reference2\\
+3 & [LMSD](https://www.lipidmaps.org/) & 40532 & Metabolites \& lipids & 2019-07-11 & @reference3\\
+4 & [MINE](https://minedatabase.mcs.anl.gov/) & 592175 & Metabolites \& lipids & 2018-02-07 & @reference4\\
+5 & [DrugBank](https://www.drugbank.ca/) & 9546 & Drugs \& xenobiolics & 2019-04-12 & @reference5\\
 \addlinespace
-6 & [DSSTox](https://comptox.epa.gov/dashboard) & 856919 & Drugs \& xenobiolics & 2019-05-06 & Grulke et al.6\\
-7 & [UNPD](NA) & 213188 & Natural products & 2019-06-13 & Gu et al.7\\
-8 & [ZhuLab](NA) & 1417 & Metabolites \& lipids & 2018-09-02 & NA\\
+6 & [DSSTox](https://comptox.epa.gov/dashboard) & 856919 & Drugs \& xenobiolics & 2019-05-06 & @reference6\\
+7 & [UNPD](NA) & 213188 & Natural products & 2019-06-13 & @reference7\\
+8 & [ZhuLab](NA) & 1417 & Metabolites \& lipids & 2018-09-02 & @reference10\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -393,7 +415,7 @@ It contains the basic information of the compound, including ALLCCS ID,
 name, formula, exact mass, SMILES, InChI, InChIKey, classification and
 structure in the right panel (Figure \ref{fig:figure2d3}). Here,
 \href{http://classyfire.wishartlab.com}{ClassyFire} is used for
-compounds' classification \textbf{【ref8】}.
+compounds' classification \citep{reference8}.
 
 \begin{figure}
 
@@ -468,11 +490,31 @@ This part records the detailed information of experimental CCS values
 records contains the basic information of adduct form, m/z, experimental
 CCS values and charge. Besides, we also provide the information of used
 instrument platform and the type of ion mobility mass spectrometry.
-Detail information can be found in Table 2.3. The measured approach is
-also provided, including single-field, multiple-fields, and empirical
-method. Corresponding reference literature is listed in the DOI column.
-If compounds don't have experimental CCS record, it would have no
-information in this part.
+Detail information can be found in Table \ref{tab:table2d3}. The
+measured approach is also provided, including single-field,
+multiple-fields, and empirical method. Corresponding reference
+literature is listed in the DOI column. If compounds don't have
+experimental CCS record, it would have no information in this part.
+
+\begin{table}
+
+\caption{\label{tab:table2d3}IM-MS Instruments in AllCCS}
+\centering
+\begin{tabular}[t]{lll}
+\toprule
+Instrument & Type & Vendor\\
+\midrule
+Agilent 6560 DTIM-QTOF & DTIMS & Agilent\\
+Waters Synapt G2-Si HDMS & TWIMS & Waters\\
+Waters Synapt G2 HDMS & TWIMS & Waters\\
+Waters Vion IMS QTOF & TWIMS & Waters\\
+TOFwerk IMS TOF & DTIMS & TOFwerk\\
+\addlinespace
+Bruker timsTOF & TIMS & Bruker\\
+Bruker timsTOF Pro & TIMS & Bruker\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}
 
@@ -488,10 +530,10 @@ information in this part.
 This part records the detailed information of predicted CCS values
 (Figure \ref{fig:figure2d6}). It provides the basic information of
 adduct forms, m/z, charge, corresponding predicted CCS values using
-AllCCS\_V1 tool, users can reference our in pressing paper
-\textbf{(XXXX)} for detailed information. Here we define representative
-structure similarity (RSS) to represent the similarity between this
-compound and the training set.
+AllCCS\_V1 tool, users can reference AllCCS paper for detailed
+information \citep{reference10}. Here we define representative structure
+similarity (RSS) to represent the similarity between this compound and
+the training set.
 
 \begin{figure}
 
@@ -803,8 +845,8 @@ etc. Specifically, it has two rank types: \textbf{CCS filtering} and
 (comparing with predicted CCS values) beyond the pre-defined cutoff
 value. CCS scoring generates an integrated score for each candidate with
 custom weights of CCS score (The detail is some with our previous
-publication - LipidIMMS Analyzer9) and MS/MS score. With CCS filtering
-or scoring, it can provide more credible results.
+publication - LipidIMMS Analyzer \citep{reference9}) and MS/MS score.
+With CCS filtering or scoring, it can provide more credible results.
 
 \subsection{Data preparation}\label{chapter4d2d1}
 
@@ -970,7 +1012,8 @@ score.
 \item
   \textbf{CCS score}: CCS score generated by comparing experimental CCS
   to predicted CCS values. CCS match is scored using a trapezoidal
-  function. (The detail of trapezoidal function LipidIMMS Analyzer)
+  function. (The detail of trapezoidal function LipidIMMS Analyzer
+  \citep{reference9})
 \item
   \textbf{Integrated score}: The integrated score is calculated using a
   linear weighting function according to the user-defined weight for
@@ -986,7 +1029,7 @@ score.
 \caption{CCS scoring result of candidates}\label{fig:figure4d6}
 \end{figure}
 
-\bibliography{book.bib,packages.bib}
+\bibliography{reference.bib,book.bib,packages.bib}
 
 
 \end{document}

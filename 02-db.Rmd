@@ -50,7 +50,7 @@ knitr::include_graphics('images/chapter2/figure2.2browser_download_new.png', dpi
 <p style=text-align:justify>In the compound card, it contains detail information of the compound. Next, we would like to explain each parts in the compound card.</p>
 
 ### Compound information{#chapter2d2d1}
-<p style=text-align:justify>It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure \@ref(fig:figure2d3)). Here, [ClassyFire](http://classyfire.wishartlab.com)  is used for compounds’ classification **【ref8】**.</p>
+<p style=text-align:justify>It contains the basic information of the compound, including ALLCCS ID, name, formula, exact mass, SMILES, InChI, InChIKey, classification and structure in the right panel (Figure \@ref(fig:figure2d3)). Here, [ClassyFire](http://classyfire.wishartlab.com)  is used for compounds’ classification [@reference8].</p>
 
 ```{r figure2d3, fig.align='center', echo = FALSE, fig.cap='Download interested compounds'}
 knitr::include_graphics('images/chapter2/figure2.3compound_card_information.png', dpi = NA)
@@ -84,7 +84,17 @@ knitr::include_graphics('images/chapter2/figure2.4unified_ccs.png', dpi = NA)
 
 
 ### Experimental CCS records{#chapter2d2d3}
-<p style=text-align:justify>This part records the detailed information of experimental CCS values (Figure \@ref(fig:figure2d5)). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in Table 2.3. The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.</p>
+<p style=text-align:justify>This part records the detailed information of experimental CCS values (Figure \@ref(fig:figure2d5)). Compounds that have experimental CCS records contains the basic information of adduct form, m/z, experimental CCS values and charge. Besides, we also provide the information of used instrument platform and the type of ion mobility mass spectrometry. Detail information can be found in Table \@ref(tab:table2d3). The measured approach is also provided, including single-field, multiple-fields, and empirical method. Corresponding reference literature is listed in the DOI column. If compounds don’t have experimental CCS record, it would have no information in this part.</p>
+
+
+```{r table2d3, tidy=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+temp <- readxl::read_xlsx('tables/instruments.xlsx')
+knitr::kable(
+  temp, booktabs = TRUE,
+  caption = 'IM-MS Instruments in AllCCS'
+)
+```
 
 
 ```{r figure2d5, fig.align='center', echo = FALSE, fig.cap='Experimental CCS records'}
@@ -93,7 +103,7 @@ knitr::include_graphics('images/chapter2/figure2.5compound_card_exp_ccs.png', dp
 
 
 ### Predicted CCS records{#chapter2d2d4}
-<p style=text-align:justify>This part records the detailed information of predicted CCS values (Figure \@ref(fig:figure2d6)). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference our in pressing paper **(XXXX)**  for detailed information. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.</p>
+<p style=text-align:justify>This part records the detailed information of predicted CCS values (Figure \@ref(fig:figure2d6)). It provides the basic information of adduct forms, m/z, charge, corresponding predicted CCS values using AllCCS_V1 tool, users can reference AllCCS paper for detailed information [@reference10]. Here we define representative structure similarity (RSS) to represent the similarity between this compound and the training set.</p>
 
 ```{r figure2d6, fig.align='center', echo = FALSE, fig.cap='Predicted CCS records'}
 knitr::include_graphics('images/chapter2/figure2.6predicted_ccs.png', dpi = NA)

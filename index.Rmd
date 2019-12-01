@@ -3,7 +3,7 @@ title: "AllCCS Tutorial V1.00"
 author: "Zhiwei Zhou"
 date: 2019-11-01
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [reference.bib, book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes
@@ -69,4 +69,3 @@ If AllCCS is useful in your project, please cite our articles.
 
 
 * Z. Zhou, Z.-J. Zhu* etc. Advancing CCS database towards metabolite annotation, In preparing
-

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html >
+
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Metabolite Annotation | AllCCS Tutorial V1.00</title>
-  <meta name="description" content="A user guide for AllCCS webserver." />
-  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AllCCS Tutorial V1.00</title>
+  <meta name="description" content="A user guide for AllCCS webserver.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 4 Metabolite Annotation | AllCCS Tutorial V1.00" />
+  <meta property="og:title" content="AllCCS Tutorial V1.00" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://allccs.zhulab.cn/" />
   <meta property="og:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
@@ -16,33 +17,29 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Metabolite Annotation | AllCCS Tutorial V1.00" />
+  <meta name="twitter:title" content="AllCCS Tutorial V1.00" />
   
   <meta name="twitter:description" content="A user guide for AllCCS webserver." />
   <meta name="twitter:image" content="http://allccs.zhulab.cn/images/logo_190808.png" />
 
-<meta name="author" content="Zhiwei Zhou" />
+<meta name="author" content="Zhiwei Zhou">
 
 
-<meta name="date" content="2019-11-01" />
+<meta name="date" content="2019-11-01">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="chapter3.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="chapter3.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -172,7 +169,7 @@ Figure 4.2: Feature match results
 <div id="chapter4d2" class="section level2">
 <h2><span class="header-section-number">4.2</span> Complement to MS/MS result (Candidate rank)</h2>
 <p style="text-align:justify">
-The candidate rank function supports filtering/re-rank candidates with inputted candidate list. This function could be in conjunct with any other in-silico MS/MS tools like MetFrag, CFM-ID, MS-Finder, and SIRIUS etc. Specifically, it has two rank types: <strong>CCS filtering</strong> and <strong>CCS scoring</strong>. CCS filtering excludes candidates which CCS errors (comparing with predicted CCS values) beyond the pre-defined cutoff value. CCS scoring generates an integrated score for each candidate with custom weights of CCS score (The detail is some with our previous publication - LipidIMMS Analyzer9) and MS/MS score. With CCS filtering or scoring, it can provide more credible results.
+The candidate rank function supports filtering/re-rank candidates with inputted candidate list. This function could be in conjunct with any other in-silico MS/MS tools like MetFrag, CFM-ID, MS-Finder, and SIRIUS etc. Specifically, it has two rank types: <strong>CCS filtering</strong> and <strong>CCS scoring</strong>. CCS filtering excludes candidates which CCS errors (comparing with predicted CCS values) beyond the pre-defined cutoff value. CCS scoring generates an integrated score for each candidate with custom weights of CCS score (The detail is some with our previous publication - LipidIMMS Analyzer <span class="citation">(Zhou et al. <a href="#ref-reference9">2019</a>)</span>) and MS/MS score. With CCS filtering or scoring, it can provide more credible results.
 </p>
 <div id="chapter4d2d1" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> Data preparation</h3>
@@ -258,7 +255,7 @@ Figure 4.5: CCS filtering result of candidates
 The results generated with CCS scoring function are similar with results from CCS filtering (Figure <a href="chapter4.html#fig:figure4d6">4.6</a>). The difference is that CCS scoring has two additional columns as CCS score and integrated score.
 </p>
 <ul>
-<li><strong>CCS score</strong>: CCS score generated by comparing experimental CCS to predicted CCS values. CCS match is scored using a trapezoidal function. (The detail of trapezoidal function LipidIMMS Analyzer)</li>
+<li><strong>CCS score</strong>: CCS score generated by comparing experimental CCS to predicted CCS values. CCS match is scored using a trapezoidal function. (The detail of trapezoidal function LipidIMMS Analyzer <span class="citation">(Zhou et al. <a href="#ref-reference9">2019</a>)</span>)</li>
 <li><strong>Integrated score</strong>: The integrated score is calculated using a linear weighting function according to the user-defined weight for each match score.</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:figure4d6"></span>
@@ -272,6 +269,12 @@ Figure 4.6: CCS scoring result of candidates
 </div>
 </div>
 </div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-reference9">
+<p>Zhou, Zhiwei, Xiaotao Shen, Xi Chen, Jia Tu, Xin Xiong, and Zheng-Jiang Zhu. 2019. “LipidIMMS Analyzer: Integrating Multi-Dimensional Information to Support Lipid Identification in Ion Mobility-Mass Spectrometry Based Lipidomics.” <em>Bioinformatics</em>, 698–700. doi:<a href="https://doi.org/10.1093/bioinformatics/bty661">10.1093/bioinformatics/bty661</a>.</p>
+</div>
+</div>
             </section>
 
           </div>
@@ -283,13 +286,11 @@ Figure 4.6: CCS scoring result of candidates
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -300,7 +301,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapaper": false,
+"instapper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -310,10 +311,6 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
-},
-"history": {
 "link": null,
 "text": null
 },
