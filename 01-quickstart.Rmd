@@ -1,6 +1,6 @@
 # Quick Start Guide{#chapter1}
 
-## Create a AllCCS Account{#chaptere1d1}
+## Create a AllCCS account{#chaptere1d1}
 <p style=text-align:justify>Users need to register AllCCS account to use the webserver. This process is very sample, and **completely private**. To register an account, navigate to the home page. The “Sign up” button is in the upper right corner of the page. Then, you need to fill in your email and verification code which would be sent to your email (Figure \@ref(fig:FigRegister)). Finally, input some basic information to complete the registration. You could log in and enjoy all functions in the web server.</p>
 
 ```{r FigRegister, fig.align='center', echo = FALSE, fig.cap='Register AllCCS account'}
@@ -21,7 +21,7 @@ knitr::include_graphics('images/chapter1/browser_1.png', dpi = NA)
 knitr::include_graphics('images/chapter1/browser_2.png', dpi = NA)
 ```
 
-## Perform CCS prediction/Annotation{#chaptere1d3}
+## Perform CCS prediction/annotation{#chaptere1d3}
 
 <p style=text-align:justify>AllCCS also provides CCS prediction function (Section \@ref(chapter3)) and metabolite annotation functions (Section \@ref(chapter4)). You could click the link or corresponding item in navigation bar. For CCS prediction function, please input the SMILES list of your compounds in the input panel. The result would be returned on the project panel within several seconds (Figure \@ref(fig:FigPrediction)).</p>
 

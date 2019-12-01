@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.22)  1 DEC 2019 16:06
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.22)  1 DEC 2019 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1000,7 +1000,7 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1035.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1035.
 
 Package rerunfilecheck Info: File `allccs_bookdown.out' has not changed.
-(rerunfilecheck)             Checksum: 611C1D95E7B96B3DFA67D54502134462.
+(rerunfilecheck)             Checksum: FD7F71CC9D4BF7BAA3E5C99BAE0D5889.
  ) 
 Here is how much of TeX's memory you used:
  24031 strings out of 494468
