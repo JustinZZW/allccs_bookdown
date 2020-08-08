@@ -21,3 +21,9 @@
 **September 22, 2019** <br>
 
 - Demo webserver online 
+
+
+**June 8, 2020** <br>
+
+- Update of AllCCS V1.10: add extended DB (ExtDB)
+- Fix some known bugs in Advanced Search
